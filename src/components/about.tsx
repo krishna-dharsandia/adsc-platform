@@ -1,63 +1,69 @@
-'use client'
+"use client";
 
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 import { AnimatedStat } from "./animated-stat";
 
 const stats = [
-    { label: "Active Members", percentage: 92 },
-    { label: "Workshop Attendance", percentage: 88 },
-    { label: "Project Completion Rate", percentage: 84 },
-    { label: "Hackathon Participation", percentage: 76 },
-    { label: "Skill Improvement", percentage: 89 },
-]
+  { label: "Active Members", percentage: 92 },
+  { label: "Workshop Attendance", percentage: 88 },
+  { label: "Project Completion Rate", percentage: 84 },
+  { label: "Hackathon Participation", percentage: 76 },
+  { label: "Skill Improvement", percentage: 89 },
+];
 
 export function About() {
-    return (
-        <section className="py-20">
-            <div className="container mx-auto">
-                <div className="max-w-5xl mx-auto space-y-20">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        className="flex flex-row justify-between w-full h-auto"
-                    >
-                        <div>
-                            <h2 className="text-5xl font-bold mb-6 items-start">About us</h2>
-                        </div>
-                        <div className="max-w-xl">
-                            <p className="text-gray-600 max-w-xl">
-                                At WOOKIES, we specialize in innovative digital marketing strategies that drive
-                                results. Our team is dedicated to helping businesses grow and succeed online.
-                            </p>
-                            <p className="text-gray-600 max-w-2xl mt-4">
-                                With talented solutions and a focus on measurable outcomes, we empower
-                                brands to connect with their audience and achieve their goals in the digital
-                                landscape.
-                            </p>
-                        </div>
-                    </motion.div>
-
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7 }}
-                        className="grid grid-cols-5 gap-24"
-                    >
-                        {stats.map((stat, index) => (
-                            <motion.div
-                                key={stat.label}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: index * 0.1 }}
-                                className="w-full"
-                            >
-                                <AnimatedStat {...stat} />
-                            </motion.div>
-                        ))}
-                    </motion.div>
-                </div>
+  return (
+    <section className="py-16 sm:py-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto space-y-16 sm:space-y-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col sm:flex-row justify-between items-center sm:items-start space-y-8 sm:space-y-0"
+          >
+            {/* Title */}
+            <div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+                About us
+              </h2>
             </div>
-        </section>
-    )
+
+            {/* Description */}
+            <div className="max-w-full sm:max-w-xl text-center sm:text-left">
+              <p className="text-gray-600 text-base sm:text-lg lg:text-xl">
+                At WOOKIES, we specialize in innovative digital marketing
+                strategies that drive results. Our team is dedicated to helping
+                businesses grow and succeed online.
+              </p>
+              <p className="text-gray-600 text-base sm:text-lg lg:text-xl mt-4">
+                With talented solutions and a focus on measurable outcomes, we
+                empower brands to connect with their audience and achieve their
+                goals in the digital landscape.
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 sm:gap-12 lg:gap-16"
+          >
+            {stats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="w-full text-center"
+              >
+                <AnimatedStat {...stat} />
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
 }
