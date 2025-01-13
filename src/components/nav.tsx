@@ -67,7 +67,7 @@ export function Nav() {
           ) : (
             <Link
               href="/sign-in"
-              className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors relative z-10"
+              className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors relative z-20"
             >
               Login
             </Link> // Display Login link if not signed in
