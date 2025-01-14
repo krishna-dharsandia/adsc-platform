@@ -6,7 +6,7 @@ import { Nav } from "@/components/nav";
 
 export default function Home() {
   return (
-    <main className="min-h-screen px-4 sm:px-6 lg:px-8">
+    <main className="min-h-screen px-4 sm:px-6 lg:px-5">
       <Nav />
       <Hero
         title="TECHNOLOGY STUDENT CLUB"

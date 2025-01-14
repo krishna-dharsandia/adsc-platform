@@ -13,7 +13,7 @@ const stats = [
 
 export function About() {
   return (
-    <section className="py-16 sm:py-20">
+    <section className="py-16 sm:py-2 mt-2 mb-2">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto space-y-16 sm:space-y-20">
           <motion.div

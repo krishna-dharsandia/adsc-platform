@@ -27,7 +27,7 @@ export function Nav() {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="top-0 left-0 right-0 z-50 w-full"
+      className="sticky top-0 left-0 right-0 z-50 w-full"
       style={{
         background: `
           linear-gradient(
@@ -43,7 +43,7 @@ export function Nav() {
       }}
     >
       {/* Yellow accent elements */}
-      <div className="absolute top-0 left-0 w-32 h-32 bg-yellow-200/20 rounded-full blur-2xl" />
+      <div className="absolute top-0 left-0 w-32 h-32 bg-yellow-200/20 rounded-full blur-2xl " />
       <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-200/20 rounded-full blur-2xl" />
 
       <div className="container mx-auto relative z-10">
