@@ -34,12 +34,11 @@ export function About() {
               <p className="text-gray-600 text-base sm:text-lg lg:text-xl">
                 ADSC is like a tech-savvy family within Atmiya University, 
                 all geared up to explore the tech universe. Our main gig? 
-                Boosting each other's developer skills and actually using what we learn.
-                
+                Boosting each other&apos;s developer skills and actually using what we learn.
               </p>
               <p className="text-gray-600 text-base sm:text-lg lg:text-xl mt-4">
                 Think of us as the cool kids organizing a bunch of exciting stuff – webinars, hands-on workshops, talks – you name it. 
-                But our goal is more than just sharing info, it's about building a community.
+                But our goal is more than just sharing info, it&apos;s about building a community.
               </p>
             </div>
           </motion.div>
