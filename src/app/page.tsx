@@ -9,8 +9,8 @@ export default function Home() {
     <main className="min-h-screen px-4 sm:px-6 lg:px-5">
       <Nav />
       <Hero
-        title="TECHNOLOGY STUDENT CLUB"
-        subtitle="A vibrant student-driven community fostering innovation, collaboration, and learning in technology. We empower students to build, innovate, and excel with cutting-edge tools and resources."
+        title="Atmiya Developer Student Club"
+        subtitle="Learning, Innovating, and Growing Together."
       />
       <About />
       <ServicesSection />
