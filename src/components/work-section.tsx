@@ -42,7 +42,7 @@ const works = [
 
 export function WorkSection() {
   return (
-    <section className="py-16 sm:py-24">
+    <section className="py-16 sm:py-24 bg-black text-white rounded-lg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <motion.div
@@ -54,7 +54,7 @@ export function WorkSection() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-left">
             Our Work
           </h2>
-          <p className="text-gray-600 text-base sm:text-lg text-left">
+          <p className="text-gray-200 text-base sm:text-lg text-left">
             Our work combines creativity and data-driven strategies to deliver
             impactful digital marketing campaigns that drive growth.
           </p>
@@ -74,16 +74,16 @@ export function WorkSection() {
             >
               {/* Text Content */}
               <div className="space-y-4">
-                <span className="inline-block text-sm font-medium text-gray-600 mb-2">
+                <span className="inline-block text-sm font-medium text-gray-200 mb-2">
                   {work.category}
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-bold leading-tight">
                   {work.title}
                 </h3>
-                <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+                <p className="text-gray-200 text-base sm:text-lg leading-relaxed">
                   {work.description}
                 </p>
-                <Button variant="outline" className="group mt-4">
+                <Button variant="outline" className="group mt-4 bg-black">
                   Learn More
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
@@ -117,7 +117,7 @@ export function WorkSection() {
           transition={{ duration: 0.5 }}
           className="mt-12 sm:mt-20 text-center"
         >
-          <Button variant="outline" size="lg" className="group">
+          <Button variant="outline" size="lg" className="group bg-black">
             Show More
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>

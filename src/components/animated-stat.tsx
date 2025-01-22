@@ -61,9 +61,9 @@ export function AnimatedStat({ label, percentage }: AnimatedStatProps) {
         <motion.div
           initial={{ height: 0 }}
           animate={controls}
-          className="absolute bottom-0 left-0 w-full dark:bg-slate-400 bg-[#f3f5f3] rounded-tl-2xl rounded-tr-2xl"
+          className="absolute bottom-0 left-0 w-full dark:bg-slate-400 bg-slate-700 rounded-tl-2xl rounded-tr-2xl"
           style={{
-            borderTop: "2px solid #2e2e2e",
+            borderTop: "7px solid blue",
           }}
         />
 
