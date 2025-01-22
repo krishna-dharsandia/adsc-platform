@@ -12,7 +12,6 @@ const navItems: NavItem[] = [
   { label: "Projects", href: "/projects" },
   { label: "Resources", href: "/resources" },
   { label: "About Us", href: "/about" },
-  { label: "Join Us", href: "/join-us" },
 ];
 
 export function Nav() {
@@ -54,44 +53,17 @@ export function Nav() {
               <span className="text-blue-200">C</span>
             </label>
           </Link>
-
-          {/* Mobile menu toggle button */}
-          <button
-            onClick={toggleMobileMenu}
-            className="md:hidden text-orange-300 hover:text-yellow-400 transition-colors relative z-10"
-          >
-            <svg
-              className="w-6 h-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d={
-                  isMobileMenuOpen
-                    ? "M6 18L18 6M6 6l12 12"
-                    : "M4 6h16M4 12h16M4 18h16"
-                }
-              />
+          <button onClick={toggleMobileMenu} className="md:hidden text-orange-300 hover:text-yellow-400 transition-colors relative z-10">
+            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
             </svg>
           </button>
 
           {/* Desktop navigation */}
           <nav className="hidden md:flex space-x-8 relative z-10">
             {navItems.map((item) => (
-              <motion.div
-                key={item.label}
-                whileHover={{ y: -2 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <Link
-                  href={item.href}
-                  className="text-white hover:text-orange-400 transition-colors"
-                >
+              <motion.div key={item.label} whileHover={{ y: -2 }} transition={{ type: "spring", stiffness: 300 }}>
+                <Link href={item.href} className="text-white hover:text-orange-400 transition-colors">
                   {item.label}
                 </Link>
               </motion.div>
@@ -102,10 +74,7 @@ export function Nav() {
           {isSignedIn ? (
             <UserButton afterSignOutUrl="/" />
           ) : (
-            <Link
-              href="/sign-in"
-              className="hidden md:block bg-white text-black px-4 py-2 rounded-md hover:bg-orange-400 hover:text-white transition-all"
-            >
+            <Link href="/sign-in" className="hidden md:block bg-white text-black px-4 py-2 rounded-md hover:bg-orange-400 hover:text-white transition-all">
               Login
             </Link>
           )}
@@ -113,30 +82,16 @@ export function Nav() {
 
         {/* Mobile navigation menu */}
         {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="md:hidden bg-black border-2 border-yellow-200 shadow-lg rounded-lg p-4 space-y-4"
-          >
+          <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="md:hidden bg-black border-2 border-yellow-200 shadow-lg rounded-lg p-4 space-y-4">
             {navItems.map((item) => (
-              <Link
-                key={item.label}
-                href={item.href}
-                className="block text-white hover:text-orange-400 transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
+              <Link key={item.label} href={item.href} className="block text-white hover:text-orange-400 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                 {item.label}
               </Link>
             ))}
             {isSignedIn ? (
               <UserButton afterSignOutUrl="/" />
             ) : (
-              <Link
-                href="/sign-in"
-                className="block bg-white text-black px-4 py-2 rounded-md text-center hover:bg-orange-400 hover:text-white transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
+              <Link href="/sign-in" className="block bg-white text-black px-4 py-2 rounded-md text-center hover:bg-orange-400 hover:text-white transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                 Login
               </Link>
             )}
