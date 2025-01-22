@@ -49,7 +49,10 @@ export function Nav() {
       <div className="container mx-auto relative z-10">
         <div className="flex items-center justify-between h-16 px-4 md:px-0">
           <Link href="/" className="font-bold text-xl relative z-10">
-            WOOKIES
+            <label htmlFor="" className="p-2 bg-black text-white rounded-lg">
+              <span className="text-blue-200">A</span>DS
+              <span className="text-blue-200">C</span>
+            </label>
           </Link>
 
           {/* Mobile menu toggle button */}
