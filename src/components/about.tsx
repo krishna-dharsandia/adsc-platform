@@ -32,14 +32,13 @@ export function About() {
             {/* Description */}
             <div className="max-w-full sm:max-w-xl text-center sm:text-left">
               <p className="text-gray-600 text-base sm:text-lg lg:text-xl">
-                At WOOKIES, we specialize in innovative digital marketing
-                strategies that drive results. Our team is dedicated to helping
-                businesses grow and succeed online.
+                ADSC is like a tech-savvy family within Atmiya University, 
+                all geared up to explore the tech universe. Our main gig? 
+                Boosting each other&apos;s developer skills and actually using what we learn.
               </p>
               <p className="text-gray-600 text-base sm:text-lg lg:text-xl mt-4">
-                With talented solutions and a focus on measurable outcomes, we
-                empower brands to connect with their audience and achieve their
-                goals in the digital landscape.
+                Think of us as the cool kids organizing a bunch of exciting stuff – webinars, hands-on workshops, talks – you name it. 
+                But our goal is more than just sharing info, it&apos;s about building a community.
               </p>
             </div>
           </motion.div>

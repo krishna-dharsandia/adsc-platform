@@ -12,7 +12,7 @@ const navItems: NavItem[] = [
   { label: "Projects", href: "/projects" },
   { label: "Resources", href: "/resources" },
   { label: "About Us", href: "/about" },
-  { label: "Join Us", href: "/join" },
+  { label: "Join Us", href: "/join-us" },
 ];
 
 export function Nav() {
