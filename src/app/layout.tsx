@@ -4,6 +4,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { ConvexClientProvider } from "@/app/provider/ConvexClientProvider";
 
 import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,8 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Atmiya Development Student Club",
-  description:
-    "Empowering students to innovate, collaborate, and build the future with cutting-edge technologies and hands-on projects.",
+  description: "Empowering students to innovate, collaborate, and build the future with cutting-edge technologies and hands-on projects.",
 };
 
 export default function RootLayout({
@@ -29,16 +29,15 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
           <div className=" dark:bg-white ">
             <ConvexClientProvider>
               {children}
+              <Toaster />
             </ConvexClientProvider>
           </div>
         </body>
       </html>
-    </ClerkProvider >
+    </ClerkProvider>
   );
 }
