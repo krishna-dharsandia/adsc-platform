@@ -5,6 +5,7 @@ import Hero from '@/components/hero/Hero';
 import ProjectsSection from '@/components/projects/ProjectsSection';
 import Reviews from '@/components/review/Reviews';
 import Techs from '@/components/techs/Techs';
+import CoreTeam from '@/components/core-team/CoreTeam';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Techs />
       <ProjectsSection />
       <Articles />
+      <CoreTeam />
       <Reviews />
       <Contact />
     </>
