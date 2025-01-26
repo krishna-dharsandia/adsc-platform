@@ -2,168 +2,153 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('../styles/theme.css');
-
 body {
-  font-family: 'Inter', sans-serif;
+  background-color: hsl(0, 0%, 8%);
+}
+
+@layer base {
+  :root {
+    /* COLORS */
+    --background: 0 0 8%;
+    --foreground: 0 100% 100%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+
+    --white--ice: rgba(225, 240, 255, 1);
+    --solitude: rgba(234, 246, 255, 1);
+    --tundora: rgba(66, 66, 66, 1);
+    --mine--shaft: rgba(35, 35, 35, 1);
+    --cod--gray: rgba(23, 23, 23, 1);
+    --dove--gray-30: rgba(115, 115, 115, 0.30000001192092896);
+    --ocean--green: rgba(60, 177, 121, 1);
+    --celtic: rgba(15, 41, 30, 1);
+    --bush: rgba(17, 49, 35, 1);
+    --black--bean: rgba(12, 31, 23, 1);
+    --jungle--green: rgba(48, 164, 108, 1);
+    --green--pea: rgba(24, 121, 78, 1);
+    --jewel: rgba(13, 126, 126, 1);
+    --dodger--blue: rgba(54, 158, 255, 1);
+    --azure--radiance: rgba(0, 145, 255, 1);
+    --science--blue: rgba(0, 106, 220, 1);
+    --endeavour: rgba(9, 84, 165, 1);
+    --downriver: rgba(15, 48, 88, 1);
+    --blue--zodiac: rgba(16, 42, 76, 1);
+    --amethyst: rgba(157, 91, 210, 1);
+    --fuchsia--pink: rgba(142, 78, 198, 1);
+    --cerise: rgba(214, 64, 159, 1);
+    --disco: rgba(122, 29, 90, 1);
+    --wine--berry: rgba(69, 26, 55, 1);
+    --loulou: rgba(59, 10, 42, 1);
+    --revolver: rgba(43, 14, 68, 1);
+    --antique--bronze: rgba(89, 74, 5, 1);
+    --bracken: rgba(68, 31, 4, 1);
+    --valencia: rgba(220, 61, 67, 1);
+    --brick--red: rgba(205, 43, 49, 1);
+    --crown-of--thorns: rgba(130, 32, 37, 1);
+    --rose-of--sharon: rgba(189, 75, 0, 1);
+    --rose-of--sharon-2: rgba(189, 75, 0, 0.2);
+    --brown: rgba(148, 62, 0, 1);
+    --supernova: rgba(247, 206, 0, 1);
+    --tan--hide: rgba(250, 147, 78, 1);
+    --silver--chalice: rgba(165, 165, 165, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply text-foreground font-Inter text-xl;
+  }
 }
 
 @layer utilities {
-  .flex-center {
-    @apply flex justify-center items-center;
+  .h1-bold {
+    @apply text-5xl md:text-6xl xl:text-8xl font-bold tracking-tighter;
   }
 
-  .flex-col-center {
-    @apply flex flex-col justify-center items-center;
+  .h2-bold {
+    @apply text-4xl md:text-5xl xl:text-7xl font-bold tracking-[-0.025em];
+  }
+
+  .h3-bold {
+    @apply text-3xl lg:text-4xl font-bold tracking-[-0.005em];
+  }
+
+  .regular-paragraph {
+    @apply md:text-2xl text-silverchalice font-normal leading-relaxed md:leading-[1.75] tracking-[-0.15px];
+  }
+
+  .text-code {
+    @apply font-Silkscreen;
   }
 
   .flex-between {
     @apply flex justify-between items-center;
   }
 
-  .flex-start {
-    @apply flex justify-start items-center;
+  .main-mask {
+    mask-image: linear-gradient(transparent, rgba(0, 0, 0, 1) 100px);
+    background-image: url('/bg-img.png');
+    opacity: 0.2;
   }
 
-  .card-wrapper {
-    @apply bg-light-900 dark:dark-gradient shadow-light-100 dark:shadow-dark-100;
-  }
-
-  .btn {
-    @apply bg-light-800 dark:bg-dark-300 !important;
-  }
-
-  .btn-secondary {
-    @apply bg-light-800 dark:bg-dark-400 !important;
-  }
-
-  .btn-tertiary {
-    @apply bg-light-700 dark:bg-dark-300 !important;
-  }
-
-  .markdown {
-    @apply max-w-full prose dark:prose-p:text-light-700 dark:prose-ol:text-light-700 dark:prose-ul:text-light-500 dark:prose-strong:text-white dark:prose-headings:text-white prose-headings:text-dark-400 prose-h1:text-dark-300 prose-h2:text-dark-300 prose-p:text-dark-500 prose-ul:text-dark-500 prose-ol:text-dark-500;
-  }
-
-  .primary-gradient {
-    background: linear-gradient(129deg, #ff7000 0%, #e2995f 100%);
-  }
-
-  .dark-gradient {
+  .hero-gradient {
     background: linear-gradient(
-      232deg,
-      rgba(23, 28, 35, 0.41) 0%,
-      rgba(19, 22, 28, 0.7) 100%
+      30deg,
+      var(--background) -50%,
+      transparent,
+      var(--background) 150%
     );
   }
 
-  .tab {
-    @apply min-h-full dark:bg-dark-400 bg-light-800 text-light-500 dark:data-[state=active]:bg-dark-300 data-[state=active]:bg-primary-100 data-[state=active]:text-primary-500 !important;
+  .grid-pattern {
+    background-image: url('/grid-pattern.png');
+    mask-image: radial-gradient(ellipse at bottom, #000, transparent 50%);
   }
-}
 
-.no-focus {
-  @apply focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 !important;
-}
+  .dot-pattern {
+    mask-image: linear-gradient(0deg, #000, transparent),
+      linear-gradient(180deg, #000, transparent);
+    mask-composite: intersect;
+    /* mask-image: linear-gradient(transparent, #000, transparent); */
+  }
 
-.active-theme {
-  filter: invert(53%) sepia(98%) saturate(3332%) hue-rotate(0deg)
-    brightness(104%) contrast(106%) !important;
-}
+  .projects-grid-pattern {
+    background-image: url('/grid-pattern.png');
+    mask-image: linear-gradient(180deg, white, transparent);
+  }
 
-.light-gradient {
-  background: linear-gradient(
-    132deg,
-    rgba(247, 249, 255, 0.5) 0%,
-    rgba(229, 237, 255, 0.25) 100%
-  );
-}
+  .projects-grid-pattern-bottom {
+    background-image: url('/grid-pattern.png');
+    background-position: bottom left;
+    mask-image: linear-gradient(0deg, white, transparent);
+  }
 
-.primary-text-gradient {
-  background: linear-gradient(129deg, #ff7000 0%, #e2995f 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.custom-scrollbar::-webkit-scrollbar {
-  width: 3px;
-  height: 3px;
-  border-radius: 2px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: #ffffff;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 50px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-/* Markdown Start */
-.markdown a {
-  color: #1da1f2;
-}
-
-.markdown a,
-code {
-  /* These are technically the same, but use both */
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-
-  -ms-word-break: break-all;
-  /* This is the dangerous one in WebKit, as it breaks things wherever */
-  word-break: break-all;
-  /* Instead use this non-standard one: */
-  word-break: break-word;
-
-  /* Adds a hyphen where the word breaks, if supported (No Blink) */
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
-
-  padding: 2px;
-  color: #ff7000 !important;
-}
-
-.markdown pre {
-  display: grid;
-  width: 100%;
-}
-
-.markdown pre code {
-  width: 100%;
-  display: block;
-  overflow-x: auto;
-
-  color: inherit !important;
-}
-/* Markdown End */
-
-/* Clerk */
-.cl-internal-b3fm6y {
-  background: linear-gradient(129deg, #ff7000 0%, #e2995f 100%) !important;
-}
-
-.hash-span {
-  margin-top: -140px;
-  padding-bottom: 140px;
-  display: block;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  .blog-grid-pattern {
+    background-image: url('/grid-pattern.png');
+    mask-image: linear-gradient(180deg, white, transparent);
+  }
 }

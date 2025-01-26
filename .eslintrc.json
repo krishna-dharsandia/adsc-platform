@@ -6,9 +6,5 @@
     "plugin:tailwindcss/recommended",
     "prettier"
   ],
-  "ignorePatterns": ["ui/"],
-  "rules": {
-    "@typescript-eslint/ban-ts-comment": "warn",
-    "@typescript-eslint/no-explicit-any": "warn"
-  }
+  "ignorePatterns": ["ui/"]
 }

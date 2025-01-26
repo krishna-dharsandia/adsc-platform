@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
 import type { Config } from 'tailwindcss';
 
 export default {
@@ -9,63 +8,131 @@ export default {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       colors: {
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
+        },
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))',
+        },
         primary: {
-          500: '#ff7000',
-          100: '#fff1e6',
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))',
         },
-        dark: {
-          100: '#000',
-          200: '#0f1117',
-          300: '#151821',
-          400: '#212734',
-          500: '#3f4354',
+        secondary: {
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))',
         },
-        light: {
-          900: '#fff',
-          850: '#fdfdfd',
-          800: '#f4f6f8',
-          700: '#dce3f1',
-          500: '#7b8ec8',
-          400: '#858ead',
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
         },
-        'light-blue': '#1da1f2',
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))',
+        },
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        chart: {
+          '1': 'hsl(var(--chart-1))',
+          '2': 'hsl(var(--chart-2))',
+          '3': 'hsl(var(--chart-3))',
+          '4': 'hsl(var(--chart-4))',
+          '5': 'hsl(var(--chart-5))',
+        },
+        whiteice: 'var(--white--ice)',
+        solitude: 'var(--solitude)',
+        tundora: 'var(--tundora)',
+        codgray: 'var(--cod--gray)',
+        mineshaft: 'var(--mine--shaft)',
+        dovegray30: 'var(--dove--gray-30)',
+        oceangreen: 'var(--ocean--green)',
+        celtic: 'var(--celtic)',
+        bush: 'var(--bush)',
+        blackbean: 'var(--black--bean)',
+        junglegreen: 'var(--jungle--green)',
+        greenpea: 'var(--green--pea)',
+        jewel: 'var(--jewel)',
+        dodgerblue: 'var(--dodger--blue)',
+        azureradiance: 'var(--azure--radiance)',
+        scienceblue: 'var(--science--blue)',
+        endeavour: 'var(--endeavour)',
+        downriver: 'var(--downriver)',
+        bluezodiac: 'var(--blue--zodiac)',
+        amethyst: 'var(--amethyst)',
+        fuchsiapink: 'var(--fuchsia--pink)',
+        cerise: 'var(--cerise)',
+        disco: 'var(--disco)',
+        wineberry: 'var(--wine--berry)',
+        loulou: 'var(--loulou)',
+        revolver: 'var(--revolver)',
+        antiquebronze: 'var(--antique--bronze)',
+        bracken: 'var(--bracken)',
+        valencia: 'var(--valencia)',
+        brickred: 'var(--brick--red)',
+        crownofthorns: 'var(--crown-of--thorns)',
+        roseofsharon: 'var(--rose-of--sharon)',
+        brown: 'var(--brown)',
+        supernova: 'var(--supernova)',
+        tanhide: 'var(--tan--hide)',
+        silverchalice: 'var(--silver--chalice)',
       },
       fontFamily: {
-        inter: ['var(--font-inter)'],
-        spaceGrotesk: ['var(--font-spaceGrotesk)'],
+        Inter: ['var(--font-inter)'],
+        Silkscreen: ['var(--font-silkscreen)'],
       },
-      boxShadow: {
-        'light-100':
-          '0px 12px 20px 0px rgba(184, 184, 184, 0.03), 0px 6px 12px 0px rgba(184,184,184,0.02), 0px 2px 4px 0px rgba(184, 184, 184, 0.03)',
-        'light-200': '10px 10px 20px 0px rgba(218, 213, 213, 0.10)',
-        'light-300': '-10px 10px 20px 0px rgba(218, 213, 213, 0.10)',
-        'dark-100': '0px 2px 10px 0px rgba(46, 52, 56, 0.10)',
-        'dark-200': '2px 0px 20px 0px rgba(39, 36, 36, 0.04)',
-      },
+
       backgroundImage: {
-        'auth-dark': "url('/assets/images/auth-dark.png')",
-        'auth-light': "url('/assets/images/auth-light.png')",
+        main: 'url("/bg-img.png")',
       },
-      screens: {
-        xs: '420px',
-      },
-      keyframes: {
-        'accordion-down': {
-          from: { height: '0px' },
-          to: { height: 'var(--radix-accordion-content-height)' },
-        },
-        'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0px' },
-        },
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
       },
       animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
+        gradient: 'gradient 8s linear infinite',
+        marquee: 'marquee var(--duration) infinite linear',
+        'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
+      },
+      keyframes: {
+        gradient: {
+          to: {
+            backgroundPosition: 'var(--bg-size) 0',
+          },
+        },
+        marquee: {
+          from: {
+            transform: 'translateX(0)',
+          },
+          to: {
+            transform: 'translateX(calc(-100% - var(--gap)))',
+          },
+        },
+        'marquee-vertical': {
+          from: {
+            transform: 'translateY(0)',
+          },
+          to: {
+            transform: 'translateY(calc(-100% - var(--gap)))',
+          },
+        },
       },
     },
   },
-  plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  plugins: [require('tailwindcss-animate')],
 } satisfies Config;
