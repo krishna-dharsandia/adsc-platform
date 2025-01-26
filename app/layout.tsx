@@ -21,23 +21,23 @@ const silkscreen = Silkscreen({
 });
 
 export const metadata: Metadata = {
-  title: "ADSC - Atmiya Student Developer Club",
-  description: `Hi 👋, I'm ADSC. I'm a passionate software engineer with a knack for creating scalable, high-performance applications and reusable systems. With a strong foundation in front-end and back-end technologies, I specialize in crafting solutions that are as impactful for users as they are efficient for developers.`,
-  creator: "Atmiya Student Developer Club",
-  applicationName: "Atmiya Student Developer Club",
-  keywords: ["", "Adel", "Guitoun", "Portfolio", "Next.js", "Software engineer"],
+  title: "ADSC - Empowering Student Developers at Atmiya University",
+  description: `Welcome to ADSC! We are a community of passionate student developers at Atmiya University, dedicated to fostering innovation, collaboration, and growth. Through events, workshops, and guidance, we aim to empower students with technical skills and real-world knowledge.`,
+  creator: "Atmiya Developer Student  Club",
+  applicationName: "Atmiya Developer Student  Club",
+  keywords: ["ADSC", "Atmiya Developer Student Club", "Student Developer Community", "Software Development", "Tech Workshops", "Developer Guidance", "Atmiya University", "Programming Events"],
   icons: {
     icon: "./favicon.ico",
-    apple: "/apple-touch-icon.png",
+    apple: "/ADSC-Icons/apple-touch-icon.png",
     other: [
       {
         rel: "icon",
-        url: "/favicon-32x32.png",
+        url: "/ADSC-Icons/favicon-32x32.png",
         sizes: "32x32",
       },
       {
         rel: "icon",
-        url: "/favicon-16x16.png",
+        url: "/ADSC-Icons/favicon-16x16.png",
         sizes: "16x16",
       },
     ],
@@ -45,14 +45,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://www.adsc.com",
-    title: "ADSC - Atmiya Student Developer Club",
-    description: `Hi 👋, I'm ADSC. I'm a passionate software engineer with a knack for creating scalable, high-performance applications and reusable systems. With a strong foundation in front-end and back-end technologies, I specialize in crafting solutions that are as impactful for users as they are efficient for developers.`,
+    title: "ADSC - Empowering Student Developers at Atmiya University",
+    description: `Join ADSC, Atmiya University's premier student developer club, where innovation meets collaboration. Discover a community built to support aspiring developers through events, mentorship, and cutting-edge technologies.`,
     images: [
       {
         url: "/opengraph-image.jpg",
         width: 1200,
         height: 628,
-        alt: "Atmiya Student Developer Club",
+        alt: "ADSC - Atmiya Developer Student Club",
       },
     ],
   },
