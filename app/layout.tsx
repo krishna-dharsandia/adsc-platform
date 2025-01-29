@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     description: `Join ADSC, Atmiya University's premier student developer club, where innovation meets collaboration. Discover a community built to support aspiring developers through events, mentorship, and cutting-edge technologies.`,
     images: [
       {
-        url: "/opengraph-image.jpg",
+        url: "/opengraph-image.png",
         width: 1200,
         height: 628,
         alt: "ADSC - Atmiya Developer Student Club",
