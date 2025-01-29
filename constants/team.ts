@@ -10,7 +10,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     socialLinks: {
       linkedin: "https://www.linkedin.com/in/ayushi-satodiya-836a47329/",
       github: "https://github.com/johndoe",
-      twitter: "https://twitter.com/johndoe",
     },
     expertise: ["Machnine Learning", "Data Analysis", "Algorithms"],
     bio: "Experienced technical leader with 10+ years in software development",
@@ -29,6 +28,20 @@ export const TEAM_MEMBERS: TeamMember[] = [
     expertise: ["Data Science and Applications", "IoT and Automation", "Full-Stack Web Development"],
     bio: "Data science enthusiast with expertise in IoT, automation, and web technologies. Passionate about combining leadership and technology to drive impactful solutions.",
     bgGradientColor: "#2A558C",
+  },
+  {
+    id: "punit-gondaliya",
+    name: "Punit Gondaliya",
+    role: "UI/UX Lead",
+    department: "CS & IT",
+    img: "/images/team-member/punit-gondaliya.jpeg",
+    socialLinks: {
+      linkedin: "https://in.linkedin.com/in/punitgondaliya/",
+      github: "https://github.com/PunitGondaliya2/",
+    },
+    expertise: ["UI/UX Design", "Web Design", "Content Producing"],
+    bio: "UI/UX enthusiast with 3 years of experience in Design and Content Creation, expanding my skills in Web Development.",
+    bgGradientColor: "#5302FF",
   },
   {
     id: "krishna-dharsandia",
