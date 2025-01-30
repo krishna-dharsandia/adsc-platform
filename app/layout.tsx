@@ -3,8 +3,6 @@ import type { Metadata } from "next";
 import { Inter, Silkscreen } from "next/font/google";
 
 import "./globals.css";
-import NavBar from "@/components/layout/NavBar";
-import Footer from "@/components/layout/Footer";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ConvexClientProvider } from "@/providers/ConvexClientProviders";
 
@@ -67,11 +65,11 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={`${inter.variable} ${silkscreen.variable} relative`}>
-          <NavBar />
           <main>
-            <ConvexClientProvider>{children}</ConvexClientProvider>
+            <ConvexClientProvider>
+              {children}
+            </ConvexClientProvider>
           </main>
-          <Footer />
           <div className="main-mask pointer-events-none absolute inset-0 -z-50" />
         </body>
       </html>

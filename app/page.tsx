@@ -6,10 +6,13 @@ import EventSection from "@/components/projects/EventSection";
 import Reviews from "@/components/review/Reviews";
 import Techs from "@/components/techs/Techs";
 import CoreTeam from "@/components/core-team/CoreTeam";
+import NavBar from "@/components/layout/NavBar";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
     <>
+      <NavBar />
       <Hero />
       <About />
       <Techs />
@@ -18,6 +21,7 @@ export default function Home() {
       <CoreTeam />
       <Reviews />
       <Contact />
+      <Footer />
     </>
   );
 }

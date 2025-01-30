@@ -64,7 +64,6 @@ const NavbarContent = () => (
       </SheetTrigger>
       <SheetContent side="left" className="border-none">
         <SheetClose />
-
         <NavLinks />
       </SheetContent>
     </Sheet>

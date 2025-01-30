@@ -50,7 +50,7 @@ export default function OnboardingPage() {
     if (isLoaded) {
       if (!user) {
         router.push("/sign-in");
-      } else if (user.publicMetadata?.onboardingComplete) {
+      } else if (user.unsafeMetadata?.onboardingComplete) {
         router.push("/");
       }
     }
@@ -58,7 +58,7 @@ export default function OnboardingPage() {
 
   if (!isLoaded) {
     return (
-      <div className="h-screen flex justify-center items-center">
+      <div className="flex h-screen items-center justify-center">
         {" "}
         <Loader />
       </div>
@@ -123,11 +123,18 @@ export default function OnboardingPage() {
         });
         return;
       }
+
       await createStudent({
         ...values,
         enrolmentIno: enrollmentId,
         profilePicture: storageId,
         clerkId: user?.id,
+      });
+
+      await user.update({
+        unsafeMetadata: {
+          onboardingComplete: true,
+        },
       });
 
       const res = await handleOnboarding({ values, userId: user.id });
@@ -143,28 +150,28 @@ export default function OnboardingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8" style={{ contain: "layout" }}>
+    <div className="flex min-h-screen items-center justify-center  px-4 py-12 sm:px-6 lg:px-8" style={{ contain: "layout" }}>
       <Card className="w-full max-w-md">
         <CardHeader>
-          <CardTitle className="text-2xl font-bold text-center">Join Us</CardTitle>
+          <CardTitle className="text-center text-2xl font-bold">Join Us</CardTitle>
           <CardDescription className="text-center">Register for your student account</CardDescription>
         </CardHeader>
         <CardContent>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               {/* Image Upload */}
-              <div className="flex justify-center mb-6">
+              <div className="mb-6 flex justify-center">
                 <div className="relative">
-                  <div className="w-32 h-32 rounded-full overflow-hidden bg-gray-100">
+                  <div className="size-32 overflow-hidden rounded-full bg-gray-100">
                     {imagePreview ? (
-                      <Image src={imagePreview} alt="Profile preview" className="w-full h-full object-cover" height={128} width={128} />
+                      <Image src={imagePreview} alt="Profile preview" className="size-full object-cover" height={128} width={128} />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center">
+                      <div className="flex size-full items-center justify-center">
                         <span className="text-gray-400">No image</span>
                       </div>
                     )}
                   </div>
-                  <Input type="file" accept="image/*" onChange={handleImageChange} className="absolute bottom-0 left-0 w-full opacity-0 cursor-pointer h-32" />
+                  <Input type="file" accept="image/*" onChange={handleImageChange} className="absolute bottom-0 left-0 h-32 w-full cursor-pointer opacity-0" />
                 </div>
               </div>
 
@@ -182,7 +189,7 @@ export default function OnboardingPage() {
                     <FormItem>
                       <FormLabel>{label}</FormLabel>
                       <FormControl>
-                        <Input placeholder={`Enter ${label}`} {...field} />
+                        <Input placeholder={`Enter ${label}`} {...field}  className="bg-white text-black"/>
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -206,12 +213,12 @@ export default function OnboardingPage() {
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger>
-                            <SelectValue placeholder={`Select ${label}`} />
+                            <SelectValue placeholder={`Select ${label}`} className="bg-white text-black" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
                           {options.map((option) => (
-                            <SelectItem key={option} value={option}>
+                            <SelectItem key={option} value={option} className="bg-white text-black">
                               {option}
                             </SelectItem>
                           ))}
