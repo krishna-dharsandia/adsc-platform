@@ -14,7 +14,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { onBoardingSchema } from "@/schemas/onBoardingSchema";
 import { useAuth, useUser } from "@clerk/nextjs";
-import { DEPARTMENTS, FACULTIES, STUDY_YEAR } from "@/constants/index";
+import { DEPARTMENTS, FACULTIES, YEARS } from "@/constants/index";
 import { handleOnboarding } from "@/actions/onboarding";
 import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
@@ -148,7 +148,7 @@ export default function OnboardingPage() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center  px-4 py-12 sm:px-6 lg:px-8" style={{ contain: "layout" }}>
+    <div className="flex items-center justify-center px-4 py-12 sm:px-6 lg:px-8" style={{ contain: "layout" }}>
       <Card className="w-full max-w-md">
         <CardHeader>
           <CardTitle className="text-center text-2xl font-bold">Join Us</CardTitle>
@@ -199,7 +199,7 @@ export default function OnboardingPage() {
               {[
                 { name: "department", label: "Department", options: DEPARTMENTS },
                 { name: "faculty", label: "Faculty", options: FACULTIES },
-                { name: "year", label: "Year", options: STUDY_YEAR },
+                { name: "year", label: "Year", options: YEARS },
               ].map(({ name, label, options }) => (
                 <FormField
                   key={name}

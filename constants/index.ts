@@ -2,4 +2,6 @@ export const DEPARTMENTS = ["Computer Science", "Electrical Engineering", "Mecha
 
 export const FACULTIES = ["Engineering", "Science", "Arts", "Business", "Medicine"];
 
-export const STUDY_YEAR = ["1st Year", "2nd Year", "3rd Year", "4th Year"];
+export const YEARS = ["1st Year", "2nd Year", "3rd Year", "4th Year"];
+
+export const PROGRAMS = ["BSc", "MSc", "PhD"];
