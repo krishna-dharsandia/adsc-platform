@@ -7,7 +7,6 @@ import Reviews from "@/components/review/Reviews";
 import Techs from "@/components/techs/Techs";
 import CoreTeam from "@/components/core-team/CoreTeam";
 import NavBar from "@/components/layout/NavBar";
-import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (

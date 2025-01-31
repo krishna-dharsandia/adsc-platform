@@ -50,8 +50,6 @@ export default function OnboardingPage() {
     if (isLoaded) {
       if (!user) {
         router.push("/sign-in");
-      } else if (user.unsafeMetadata?.onboardingComplete) {
-        router.push("/");
       }
     }
   }, [isLoaded, user, router]);
@@ -189,7 +187,7 @@ export default function OnboardingPage() {
                     <FormItem>
                       <FormLabel>{label}</FormLabel>
                       <FormControl>
-                        <Input placeholder={`Enter ${label}`} {...field}  className="bg-white text-black"/>
+                        <Input placeholder={`Enter ${label}`} {...field} className="bg-white text-black" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>

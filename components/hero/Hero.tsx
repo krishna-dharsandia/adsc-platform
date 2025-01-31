@@ -2,8 +2,11 @@ import { cn } from "@/lib/utils";
 import AnimatedGradientText from "../ui/animated-gradient-text";
 import AnimatedGridPattern from "../ui/animated-grid-pattern";
 import Link from "next/link";
+import { auth } from "@clerk/nextjs/server";
 
-const Hero = () => {
+const Hero = async () => {
+  const user = await auth();
+
   return (
     <section className="relative px-6 pb-44" style={{ contain: "layout" }}>
       <div className="pt-48">
@@ -18,9 +21,9 @@ const Hero = () => {
         <div className="flex w-fit flex-col items-start gap-4">
           <p className="font-Silkscreen font-normal uppercase text-gray-400 md:mt-8 md:text-2xl">ADSC · Empowering Students</p>
           <div>
-            <Link href="/sign-up" target="_blank">
+            <Link href={user.userId ? "" : "/sign-up"} target={user.userId ? "" : "_blank"}>
               <AnimatedGradientText className="rounded-full px-5 py-2 text-lg hover:cursor-pointer">
-                🤝 <hr className="mx-2 h-4 w-px shrink-0 bg-gray-400" /> <span className={cn(`inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`)}>Join the Movement</span>
+                {user.userId ? "🎉" : "🤝"} <hr className="mx-2 h-4 w-px shrink-0 bg-gray-400" /> <span className={cn(`inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`)}>{user.userId ? "You Are Part Of Movement" : "Join the Movement"}</span>
               </AnimatedGradientText>
             </Link>
           </div>
