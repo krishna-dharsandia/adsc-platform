@@ -5,6 +5,7 @@ import { Inter, Silkscreen } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ConvexClientProvider } from "@/providers/ConvexClientProviders";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -65,11 +66,22 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={`${inter.variable} ${silkscreen.variable} relative`}>
+<<<<<<< HEAD
           <main>
             <ConvexClientProvider>
               {children}
             </ConvexClientProvider>
           </main>
+=======
+          <NavBar />
+
+          <main>
+            <ConvexClientProvider>{children}</ConvexClientProvider>
+            <Toaster />
+          </main>
+
+          <Footer />
+>>>>>>> b25a9fd (feat: Add image generator component for creating club member cards)
           <div className="main-mask pointer-events-none absolute inset-0 -z-50" />
         </body>
       </html>
