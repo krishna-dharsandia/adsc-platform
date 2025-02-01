@@ -150,15 +150,17 @@ export default function OnboardingPage() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center mx-9">
-      <MagicCard className="p-4 flex items-center justify-center cursor-pointer border-none bg-background text-white">
-        <div className="relative flex flex-row gap-x-6 p-6 w-full">
-          <div>
-            <h2 className="text-2xl font-bold text-center mb-6">Complete Your Profile</h2>
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="grid grid-cols-3 gap-4">
-                <div className="flex items-center justify-center">
-                  <div className="relative h-40 w-40 rounded-full overflow-hidden bg-gray-200" onClick={() => document.getElementById("file-upload")?.click()}>
+    <div className="mx-auto min-h-screen w-full max-w-4xl px-4 py-8 md:px-9">
+      <MagicCard className="w-full cursor-pointer border-none bg-background p-4 text-white">
+        <div className="relative w-full p-4 md:p-6">
+          <h2 className="mb-6 text-center text-2xl font-bold">Complete Your Profile</h2>
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-6">
+              {/* <div className="flex items-center justify-center">
+                  <div
+                    className="relative mx-auto h-32 w-32 overflow-hidden rounded-full bg-gray-200 md:h-40 md:w-40"
+                    onClick={() => document.getElementById("file-upload")?.click()}
+                  >
                     {imagePreview ? (
                       <Image src={imagePreview || "/placeholder.svg"} alt="Profile preview" layout="fill" objectFit="cover" />
                     ) : (
@@ -168,110 +170,138 @@ export default function OnboardingPage() {
                     )}
                   </div>
                   <input id="file-upload" name="file-upload" type="file" className="sr-only" accept="image/*" onChange={handleImageChange} />
-                </div>
+                </div> */}
 
-                <div className="col-span-3 sm:col-span-2 grid grid-cols-2 gap-4">
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Name</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Full Name" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="enrolmentIno"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Enrollment ID</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Enrollment ID" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Email ID</FormLabel>
-                        <FormControl>
-                          <Input type="email" placeholder="Email" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="mobile"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Mobile Number</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Mobile Number" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-
-                <div className="col-span-3 grid grid-cols-2 sm:grid-cols-4 gap-4">
-                  {[
-                    { name: "faculty", label: "Faculty", options: FACULTIES },
-                    { name: "department", label: "Department", options: DEPARTMENTS },
-                    { name: "program", label: "Program", options: PROGRAMS },
-                    { name: "year", label: "Year", options: YEARS },
-                  ].map(({ name, label, options }) => (
-                    <FormField
-                      key={name}
-                      control={form.control}
-                      name={name as "faculty" | "department" | "program" | "year"}
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>{label}</FormLabel>
-                          <Select onValueChange={field.onChange} defaultValue={field.value}>
-                            <FormControl>
-                              <SelectTrigger>
-                                <SelectValue placeholder={`Select ${label}`} />
-                              </SelectTrigger>
-                            </FormControl>
-                            <SelectContent>
-                              {options.map((option) => (
-                                <SelectItem key={option} value={option}>
-                                  {option}
-                                </SelectItem>
-                              ))}
-                            </SelectContent>
-                          </Select>
-                          <FormMessage />
-                        </FormItem>
-                      )}
+              {/* Profile Image Section */}
+              <div className="mx-auto mb-6 w-full max-w-xs">
+                <div
+                  className="relative mx-auto h-32 w-32 overflow-hidden rounded-full bg-gray-200 md:h-40 md:w-40"
+                  onClick={() => document.getElementById("file-upload")?.click()}
+                >
+                  {imagePreview ? (
+                    <Image
+                      src={imagePreview || "/placeholder.svg"}
+                      alt="Profile preview"
+                      layout="fill"
+                      objectFit="cover"
                     />
-                  ))}
+                  ) : (
+                    <svg className="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                  )}
                 </div>
+                <input
+                  id="file-upload"
+                  name="file-upload"
+                  type="file"
+                  className="sr-only"
+                  accept="image/*"
+                  onChange={handleImageChange}
+                />
+              </div>
 
-                <div className="col-span-3">
-                  <Button type="submit" className="w-full" disabled={loading}>
-                    {loading ? <Loader className="w-4 h-4 mr-2" /> : null}
-                    Complete Registration
-                  </Button>
-                </div>
-              </form>
-            </Form>
-          </div>
+              <div className="grid w-full gap-4 md:grid-cols-2">
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Name</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Full Name" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="enrolmentIno"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Enrollment ID</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Enrollment ID" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Email ID</FormLabel>
+                      <FormControl>
+                        <Input type="email" placeholder="Email" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="mobile"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Mobile Number</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Mobile Number" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+
+              <div className="grid w-full gap-4 md:grid-cols-2 lg:grid-cols-4">
+                {[
+                  { name: "faculty", label: "Faculty", options: FACULTIES },
+                  { name: "department", label: "Department", options: DEPARTMENTS },
+                  { name: "program", label: "Program", options: PROGRAMS },
+                  { name: "year", label: "Year", options: YEARS },
+                ].map(({ name, label, options }) => (
+                  <FormField
+                    key={name}
+                    control={form.control}
+                    name={name as "faculty" | "department" | "program" | "year"}
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>{label}</FormLabel>
+                        <Select onValueChange={field.onChange} defaultValue={field.value}>
+                          <FormControl>
+                            <SelectTrigger>
+                              <SelectValue placeholder={`Select ${label}`} />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
+                            {options.map((option) => (
+                              <SelectItem key={option} value={option}>
+                                {option}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                ))}
+              </div>
+
+              <div className="col-span-3">
+                <Button type="submit" className="w-full" disabled={loading}>
+                  {loading ? <Loader className="mr-2 h-4 w-4" /> : null}
+                  Complete Registration
+                </Button>
+              </div>
+            </form>
+          </Form>
         </div>
       </MagicCard>
       <DotPattern width={20} height={20} cx={1} cy={1} cr={1} className="dot-pattern opacity-50" />

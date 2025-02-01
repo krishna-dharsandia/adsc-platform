@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 import { useToast } from "@/hooks/use-toast";
 
 export default function ClubMemberCard() {
-  const [name, setName] = useState("Name Surname");
+  const [name, setName] = useState("");
   const [image, setImage] = useState<string | ArrayBuffer | null>(null);
   const cardRef = useRef(null);
   const toast = useToast();
@@ -73,7 +73,7 @@ export default function ClubMemberCard() {
           {typeof image === "string" && <img src={image} alt="User" className="absolute top-[140px] left-[100px] w-[200px] h-[200px] rounded-full object-cover" />}
 
           {/* User Name */}
-          <p className="absolute bottom-[50px] left-0 right-0 text-center text-xl font-bold text-red-700">{name}</p>
+          <p className="absolute bottom-[36px] left-0 right-0 text-center text-xl font-bold text-red-700">{name}</p>
         </div>
 
         {/* Download Button */}

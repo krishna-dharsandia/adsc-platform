@@ -70,7 +70,6 @@ export default function RootLayout({
         <body className={`${inter.variable} ${silkscreen.variable} relative`}>
           <main>
             <NavBar />
-
             <ConvexClientProvider>{children}</ConvexClientProvider>
             <Toaster />
           </main>
