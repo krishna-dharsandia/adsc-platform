@@ -45,12 +45,12 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://www.adsc.com",
+    url: "https://adsc-atmiya.vercel.app/",
     title: "ADSC - Empowering Student Developers at Atmiya University",
     description: `Join ADSC, Atmiya University's premier student developer club, where innovation meets collaboration. Discover a community built to support aspiring developers through events, mentorship, and cutting-edge technologies.`,
     images: [
       {
-        url: "/opengraph-image.jpg",
+        url: "/opengraph-image.png",
         width: 1200,
         height: 628,
         alt: "ADSC - Atmiya Developer Student Club",
