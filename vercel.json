@@ -1,0 +1,13 @@
+{
+    "projects": [
+      {
+        "name": "landing-site",
+        "rootDirectory": "landing"
+      },
+      {
+        "name": "event-site",
+        "rootDirectory": "events"
+      }
+    ]
+  }
+  
