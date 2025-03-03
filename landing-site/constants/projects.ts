@@ -25,10 +25,10 @@ export const projects: Project[] = [
     date: "Sep 29, 2023",
     github: "",
     live: "",
-    color: "rgba(249,115,22)",
-    btnBg: "rgba(154,52,18,0.5)",
-    btnBgHover: "rgba(67,20,7)",
-    cardBg: "rgba(154,52,18,0.05)",
+    color: "rgba(59,130,246)", // Blue
+    btnBg: "rgba(29,78,216,0.5)",
+    btnBgHover: "rgba(30,58,138)",
+    cardBg: "rgba(29,78,216,0.05)",
   },
   {
     id: "2",
@@ -40,10 +40,10 @@ export const projects: Project[] = [
     date: "Feb 03, 2024",
     github: "",
     live: "",
-    color: "rgba(139,92,246)",
-    btnBg: "rgba(91,33,182,0.5)",
-    btnBgHover: "rgba(46,16,101)",
-    cardBg: "rgba(91,33,182,0.05)",
+    color: "rgba(234,88,12)", // Orange
+    btnBg: "rgba(154,52,18,0.5)",
+    btnBgHover: "rgba(124,45,18)",
+    cardBg: "rgba(154,52,18,0.05)",
   },
   {
     id: "3",
@@ -55,9 +55,24 @@ export const projects: Project[] = [
     date: "Feb 01, 2025",
     github: "",
     live: "https://www.youtube.com/live/7gSnJTBxVjc?si=pIaO7ygLLaQGprul",
-    color: "rgba(0,206,201)",
-    btnBg: "rgba(0,139,136,0.5)",
-    btnBgHover: "rgba(0,99,97)",
-    cardBg: "rgba(0,139,136,0.05)",
+    color: "rgba(34,197,94)", // Green
+    btnBg: "rgba(21,128,61,0.5)",
+    btnBgHover: "rgba(20,83,45)",
+    cardBg: "rgba(21,128,61,0.05)",
+  },
+  {
+    id: "4",
+    screenshot: "/images/events/web-dev-seminar.jpeg",
+    title: "Web Development Seminar",
+    subTitle: "Technical Fest / Academic Fests",
+    stack: ["HTML", "CSS", "JavaScript", "API", "JSON", "Tenor API"],
+    description: "An interactive hands-on web development seminar where participants learned to build 'Meme Blast' - a dynamic web application that fetches and displays memes using the Tenor API. The session covered fundamental web technologies including HTML, CSS, and JavaScript, with practical examples of API integration, JSON data handling, and DOM manipulation. Participants gained real-world experience in building responsive web applications while creating an engaging meme search interface.",
+    date: "Feb 27, 2025",
+    github: "https://github.com/Jenil-Desai/Meme-Blast",
+    live: "https://www.youtube.com/live/JpZph22bF4E?si=L8MS0Rv56Eu-gjjsa",
+    color: "rgba(168,85,247)", // Purple
+    btnBg: "rgba(126,34,206,0.5)",
+    btnBgHover: "rgba(88,28,135)",
+    cardBg: "rgba(126,34,206,0.05)",
   },
 ];
