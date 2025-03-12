@@ -75,4 +75,19 @@ export const projects: Project[] = [
     btnBgHover: "rgba(88,28,135)",
     cardBg: "rgba(126,34,206,0.05)",
   },
+  {
+    id: "5",
+    screenshot: "/images/events/au-hackthon.jpeg",
+    title: "AU Internal Hackthon",
+    subTitle: "Internal College Competition",
+    stack: ["react", "node.js", "express", "mongodb", "bootstrap", "github", "figma", "problem-solving"],
+    description: "An interactive hands-on web development seminar where participants learned to build 'Meme Blast' - a dynamic web application that fetches and displays memes using the Tenor API. The session covered fundamental web technologies including HTML, CSS, and JavaScript, with practical examples of API integration, JSON data handling, and DOM manipulation. Participants gained real-world experience in building responsive web applications while creating an engaging meme search interface.",
+    date: "Mar 22, 2025",
+    github: "",
+    live: "https://forms.gle/s6dhfVKgCCdFgz7m9",
+    color: "rgba(200,100,247)", // Purple
+    btnBg: "rgba(126,34,206,0.5)",
+    btnBgHover: "rgba(88,28,135)",
+    cardBg: "rgba(126,34,206,0.05)",
+  },
 ];
