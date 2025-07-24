@@ -20,6 +20,13 @@ export const contacts = [
     description: "Feel free to reach out to me directly via email.",
     path: "mailto:gdsc.atmiya@gmail.com",
   },
+  {
+    id: "discord",
+    title: "Discord",
+    icon: "/icons/discord.svg",
+    description: "Join our Discord community for discussions and support.",
+    path: "https://discord.gg/zTp84jPNQb"
+  }
 ];
 
 export const socialLinks = [
@@ -41,4 +48,10 @@ export const socialLinks = [
     alt: "Link to ADSC's linkedin profile",
     path: "https://www.linkedin.com/company/adsc-atmiya-university",
   },
+  {
+    id: "discord",
+    icon: "/icons/discord.svg",
+    alt: "Link to ADSC's Discord server",
+    path: "https://discord.gg/zTp84jPNQb",
+  }
 ];

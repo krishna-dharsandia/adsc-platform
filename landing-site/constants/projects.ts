@@ -77,7 +77,7 @@ export const projects: Project[] = [
   },
   {
     id: "5",
-    screenshot: "/images/events/au-hackthon.jpeg",
+    screenshot: "/images/events/au-hackthon.webp",
     title: "AU Internal Hackthon",
     subTitle: "Internal College Competition",
     stack: ["react", "node.js", "express", "mongodb", "bootstrap", "github", "figma", "problem-solving"],
@@ -90,4 +90,19 @@ export const projects: Project[] = [
     btnBgHover: "rgba(88,28,135)",
     cardBg: "rgba(126,34,206,0.05)",
   },
+  {
+    id: "6",
+    screenshot: "/images/events/the-empowering-education-with-ai.webp",
+    title: "Empowring Education With AI",
+    subTitle: "Smart Tools For Smarter Teaching",
+    stack: ["Notebook LM", "Mentimeter", "Gamma AI", "Perplexity AI", "Suno AI", "Elicit", "Canva Magic Write", "Notion AI"],
+    description: "The Empowering Education with AI workshop, organized by the Atmiya Developer Student Club (ADSC), aimed to showcase how artificial intelligence can revolutionize the education sector by making teaching more efficient, personalized, and impactful",
+    date: "Jul 23, 2025",
+    github: "",
+    live: "",
+    color: "rgba(59,130,246)", // Blue
+    btnBg: "rgba(29,78,216,0.5)",
+    btnBgHover: "rgba(30,58,138)",
+    cardBg: "rgba(29,78,216,0.05)",
+  }
 ];
