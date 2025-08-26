@@ -105,4 +105,48 @@ export const projects: Project[] = [
     btnBgHover: "rgba(30,58,138)",
     cardBg: "rgba(29,78,216,0.05)",
   }
+  ,
+  {
+    id: "7",
+    screenshot: "/images/events/discord-linkedin-unlocked.jpg",
+    title: "LinkedIn Unlocked: Discord Event",
+    subTitle: "Live LinkedIn Profile Reviews & Optimization",
+    stack: [
+      "Live Profile Reviews",
+      "LinkedIn Optimization",
+      "Recruiter Insights",
+      "Networking Guidance",
+      "Q&A Session"
+    ],
+    description:
+      "A special Discord event focused on helping students unlock the full potential of their LinkedIn profiles. The session features live reviews of selected student profiles, actionable tips to optimize your headline, about section, and more. Discover secrets to building a recruiter-ready profile, get guidance on boosting your visibility through activity and networking, and enjoy a chance to ask your questions live for personalized advice.",
+    date: "Aug 23, 2025",
+    github: "",
+    live: "https://discord.gg/zTp84jPNQb",
+    color: "rgba(59,130,246)", // Blue
+    btnBg: "rgba(29,78,216,0.5)",
+    btnBgHover: "rgba(30,58,138)",
+    cardBg: "rgba(29,78,216,0.05)",
+  },
+  {
+    id: "8",
+    screenshot: "/images/events/workshop-intro-to-git-and-github.png",
+    title: "Intro To Git & GitHub - Workshop",
+    subTitle: "Version Control & Collaboration Made Easy",
+    stack: [
+      "Git & Version Control",
+      "Repositories & Branches",
+      "GitHub Collaboration",
+      "Hands-on Practice"
+    ],
+    description:
+      "A practical workshop designed to introduce students to the fundamentals of Git and GitHub. Learn the essentials of version control, how to work with repositories and branches, collaborate effectively on GitHub, and gain hands-on experience with real-world scenarios. Perfect for beginners and anyone looking to strengthen their collaboration skills in software development. Held on 29th August 2025 at 422 Seminar Hall, B Wing, Atmiya University.",
+    date: "Aug 29, 2025",
+    github: "",
+    live: "",
+    color: "rgba(59,130,246)", // Blue
+    btnBg: "rgba(29,78,216,0.5)",
+    btnBgHover: "rgba(30,58,138)",
+    cardBg: "rgba(29,78,216,0.05)",
+  }
 ];
