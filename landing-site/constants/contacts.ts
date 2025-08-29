@@ -26,6 +26,13 @@ export const contacts = [
     icon: "/icons/discord.svg",
     description: "Join our Discord community for discussions and support.",
     path: "https://discord.gg/zTp84jPNQb"
+  },
+  {
+    id: "whatsapp",
+    title: "WhatsApp",
+    icon: "/icons/whatsapp.svg",
+    description: "Join our WhatsApp group for quick updates and chats.",
+    path: "https://whatsapp.com/channel/0029VaDA0a52f3EJBeidSK0B"
   }
 ];
 
@@ -53,5 +60,11 @@ export const socialLinks = [
     icon: "/icons/discord.svg",
     alt: "Link to ADSC's Discord server",
     path: "https://discord.gg/zTp84jPNQb",
+  },
+  {
+    id: "whatsapp",
+    icon: "/icons/whatsapp.svg",
+    alt: "Link to ADSC's WhatsApp group",
+    path: "https://whatsapp.com/channel/0029VaDA0a52f3EJBeidSK0B"
   }
 ];
