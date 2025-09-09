@@ -11,7 +11,7 @@
 
 **Main website for ADSC (Atmiya Developer Students Club). Built with Next.js, this platform showcases events, hackathons, team, and resources for the ADSC community.**
 
-[Website](https://adsc.au) • [Documentation](https://docs.adsc.au) • [Report Bug](https://github.com/krishna-dharsandia/adsc-platform/issues) • [Request Feature](https://github.com/krishna-dharsandia/adsc-platform/issues)
+[Website](https://adsc.atmiya.in) • [Report Bug](https://github.com/krishna-dharsandia/adsc-platform/issues) • [Request Feature](https://github.com/krishna-dharsandia/adsc-platform/issues)
 
 </div>
 
