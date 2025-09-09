@@ -2,12 +2,9 @@ import React from "react";
 import type { Metadata } from "next";
 import { Inter, Silkscreen } from "next/font/google";
 
-import "./globals.css";
-import { ClerkProvider } from "@clerk/nextjs";
-import { ConvexClientProvider } from "@/providers/ConvexClientProviders";
-import { Toaster } from "@/components/ui/toaster";
 import Footer from "@/components/layout/Footer";
 import NavBar from "@/components/layout/NavBar";
+import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -65,18 +62,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body className={`${inter.variable} ${silkscreen.variable} relative`}>
-          <main>
-            <NavBar />
-            <ConvexClientProvider>{children}</ConvexClientProvider>
-            <Toaster />
-          </main>
-          <Footer />
-          <div className="main-mask pointer-events-none absolute inset-0 -z-50" />
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en">
+      <body className={`${inter.variable} ${silkscreen.variable} relative`}>
+        <main>
+          <NavBar />
+          {children}
+        </main>
+        <Footer />
+        <div className="absolute inset-0 pointer-events-none main-mask -z-50" />
+      </body>
+    </html>
   );
 }
