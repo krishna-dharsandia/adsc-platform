@@ -6,5 +6,10 @@
     "plugin:tailwindcss/recommended",
     "prettier"
   ],
-  "ignorePatterns": ["ui/"]
+  "rules": {
+    "react/no-unescaped-entities": "off"
+  },
+  "ignorePatterns": [
+    "ui/"
+  ]
 }

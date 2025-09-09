@@ -3,7 +3,7 @@ export default function PrivacyPage() {
     <main className="max-w-3xl mx-auto px-4 py-12 text-lg text-foreground">
       <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
       <p className="mb-4">
-        Your privacy is important to us. It is ADSC's policy to respect your privacy and comply with any applicable law and regulation regarding any personal information we may collect about you, including across our website, <a href="https://www.events.adsc-atmiya.in" className="underline hover:text-primary transition-colors">https://www.events.adsc-atmiya.in</a>, and other sites we own and operate.
+        Your privacy is important to us. It is ADSC&apos;s policy to respect your privacy and comply with any applicable law and regulation regarding any personal information we may collect about you, including across our website, <a href="https://www.events.adsc-atmiya.in" className="underline hover:text-primary transition-colors">https://www.events.adsc-atmiya.in</a>, and other sites we own and operate.
       </p>
       <p className="mb-4">This policy is effective as of 1 June 2023 and was last updated on 1 June 2023.</p>
 
@@ -14,7 +14,7 @@ export default function PrivacyPage() {
 
       <h3 className="text-lg font-semibold mt-6 mb-2">Log Data</h3>
       <p className="mb-4">
-        When you visit our website, our servers may automatically log the standard data provided by your web browser. It may include your device's Internet Protocol (IP) address, your browser type and version, the pages you visit, the time and date of your visit, the time spent on each page, other details about your visit, and technical details that occur in conjunction with any errors you may encounter.
+        When you visit our website, our servers may automatically log the standard data provided by your web browser. It may include your device&apos;s Internet Protocol (IP) address, your browser type and version, the pages you visit, the time and date of your visit, the time spent on each page, other details about your visit, and technical details that occur in conjunction with any errors you may encounter.
       </p>
       <p className="mb-4">
         Please be aware that while this information may not be personally identifying by itself, it may be possible to combine it with other data to personally identify individual persons.
