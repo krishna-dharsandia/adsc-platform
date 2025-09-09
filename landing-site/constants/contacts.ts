@@ -33,6 +33,13 @@ export const contacts = [
     icon: "/icons/whatsapp.svg",
     description: "Join our WhatsApp group for quick updates and chats.",
     path: "https://whatsapp.com/channel/0029VaDA0a52f3EJBeidSK0B"
+  },
+  {
+    id: "github",
+    title: "GitHub",
+    icon: "/icons/github.svg",
+    description: "Check out our projects and contribute on GitHub.",
+    path: "https://github.com/atmiya-Developer-Students-Club"
   }
 ];
 
@@ -66,5 +73,11 @@ export const socialLinks = [
     icon: "/icons/whatsapp.svg",
     alt: "Link to ADSC's WhatsApp group",
     path: "https://whatsapp.com/channel/0029VaDA0a52f3EJBeidSK0B"
+  },
+  {
+    id: "github",
+    icon: "/icons/github.svg",
+    alt: "Link to ADSC's GitHub profile",
+    path: "https://github.com/atmiya-Developer-Students-Club"
   }
 ];

@@ -8,9 +8,15 @@ const Contact = () => {
         Connect with <span className="text-yellow-600">ADSC</span> for guidance, collaboration, or to join our mission!
       </h4>
 
-      <div className="flex flex-col gap-4 lg:flex-row xl:justify-center ">
+      <div className="flex flex-col gap-4 md:flex-row md:flex-wrap md:justify-center">
         {contacts.map((contact) => (
-          <ContactCard key={contact.id} title={contact.title} description={contact.description} icon={contact.icon} path={contact.path} />
+          <ContactCard
+            key={contact.id}
+            title={contact.title}
+            description={contact.description}
+            icon={contact.icon}
+            path={contact.path}
+          />
         ))}
       </div>
     </section>
