@@ -18,32 +18,6 @@ export interface Event {
 export const events: Event[] = [
   {
     id: "1",
-    image: "/images/events/inter-college-hackthon.JPG",
-    name: "Inter College Hackathon",
-    category: "Technical fest/academic fests",
-    tags: ["next.js", "typescript", "clerck", "tailwindcss", "mongodb", "mongoose", "clerck webhooks"],
-    description: `Inter College Hackathon is a competitive event where students from various colleges come together to solve real-world problems using technology. This project showcases a platform built to manage and display the hackathon details, participants, and their projects. The application leverages modern web technologies to provide a seamless and interactive experience for users.`,
-    date: "Sep 29, 2023",
-    color: "rgba(59,130,246)", // Blue
-    btnBg: "rgba(29,78,216,0.5)",
-    btnBgHover: "rgba(30,58,138)",
-    cardBg: "rgba(29,78,216,0.05)",
-  },
-  {
-    id: "2",
-    image: "/images/events/code-carnival.jpg",
-    name: "Code Carnival - The Open Hackathon",
-    category: "Technical fest/academic fests",
-    tags: ["react", "typescript", "tailwindcss", "nx", "rollup", "Module Federation", "vitest", "playwright", "storybook", "svgr", "lint-staged", "husky", "ci/cd", "aws"],
-    description: "Code Carnival - The Open Hackathon is an inclusive event designed to bring together developers, designers, and tech enthusiasts from all backgrounds to collaborate on innovative projects. Participants are encouraged to push the boundaries of technology and creativity, working on projects that range from web applications to AI-driven solutions. This hackathon emphasizes learning, networking, and the spirit of open-source collaboration, providing a platform for individuals to showcase their skills and make meaningful contributions to the tech community.",
-    date: "Feb 03, 2024",
-    color: "rgba(234,88,12)", // Orange
-    btnBg: "rgba(154,52,18,0.5)",
-    btnBgHover: "rgba(124,45,18)",
-    cardBg: "rgba(154,52,18,0.05)",
-  },
-  {
-    id: "3",
     image: "/images/events/orientenation-session.jpg",
     name: "ADSC - Orientenation Session",
     category: "Orientation and introductory session",
@@ -57,7 +31,7 @@ export const events: Event[] = [
     cardBg: "rgba(21,128,61,0.05)",
   },
   {
-    id: "4",
+    id: "2",
     image: "/images/events/web-dev-seminar.jpeg",
     name: "Web Development Seminar",
     category: "Technical Fest / Academic Fests",
@@ -71,21 +45,7 @@ export const events: Event[] = [
     cardBg: "rgba(126,34,206,0.05)",
   },
   {
-    id: "5",
-    image: "/images/events/au-hackthon.webp",
-    name: "AU Internal Hackthon",
-    category: "Internal College Competition",
-    tags: ["react", "node.js", "express", "mongodb", "bootstrap", "github", "figma", "problem-solving"],
-    description: "An interactive hands-on web development seminar where participants learned to build 'Meme Blast' - a dynamic web application that fetches and displays memes using the Tenor API. The session covered fundamental web technologies including HTML, CSS, and JavaScript, with practical examples of API integration, JSON data handling, and DOM manipulation. Participants gained real-world experience in building responsive web applications while creating an engaging meme search interface.",
-    date: "Mar 22, 2025",
-    registerUrl: "https://forms.gle/s6dhfVKgCCdFgz7m9",
-    color: "rgba(200,100,247)", // Purple
-    btnBg: "rgba(126,34,206,0.5)",
-    btnBgHover: "rgba(88,28,135)",
-    cardBg: "rgba(126,34,206,0.05)",
-  },
-  {
-    id: "6",
+    id: "3",
     image: "/images/events/the-empowering-education-with-ai.webp",
     name: "Empowring Education With AI",
     category: "Smart Tools For Smarter Teaching",
@@ -98,7 +58,7 @@ export const events: Event[] = [
     cardBg: "rgba(29,78,216,0.05)",
   },
   {
-    id: "7",
+    id: "4",
     image: "/images/events/empowering-bioscience-with-ai.jpeg",
     name: "Empowering Bioscience With AI",
     category: "Smart Tools For Smarter Learning",
@@ -112,7 +72,7 @@ export const events: Event[] = [
     cardBg: "rgba(202,138,4,0.05)",
   },
   {
-    id: "8",
+    id: "5",
     image: "/images/events/discord-linkedin-unlocked.jpg",
     name: "LinkedIn Unlocked: Discord Event",
     category: "Live LinkedIn Profile Reviews & Optimization",
@@ -133,7 +93,7 @@ export const events: Event[] = [
     cardBg: "rgba(29,78,216,0.05)",
   },
   {
-    id: "9",
+    id: "6",
     image: "/images/events/intro-to-git-and-github-workshop.jpeg",
     name: "Intro To Git & GitHub - Workshop",
     category: "Version Control & Collaboration Made Easy",

@@ -6,6 +6,9 @@ const NavLinks = () => {
       <Link className="py-4 md:py-0 md:hover:opacity-70" href="/events">
         Events
       </Link>
+      <Link className="py-4 md:py-0 md:hover:opacity-70" href="/hackathons">
+        Hackathons
+      </Link>
       <Link className="py-4 md:py-0 md:hover:opacity-70" href="https://events.adsc-atmiya.in" target="_blank">
         EMS
       </Link>
