@@ -5,8 +5,8 @@ import { socialLinks } from '@/constants/contacts';
 
 const Footer = () => {
   return (
-    <footer className="text-center container mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 py-16 text-left">
+    <footer className="container mx-auto text-center">
+      <div className="grid grid-cols-1 gap-8 px-6 py-16 text-left md:grid-cols-3">
         {/* Logo + Social Media Column */}
         <div className="flex flex-col items-center md:items-start">
           <Logo isLogoFooter />
@@ -22,7 +22,7 @@ const Footer = () => {
         </div>
         {/* Legal Column */}
         <div>
-          <h3 className="mb-4 font-semibold text-lg text-code">Legal</h3>
+          <h3 className="mb-4 text-lg font-semibold text-code">Legal</h3>
           <ul className="flex flex-col gap-3 text-gray-400">
             <li><Link href="/legal/cookies">Cookies</Link></li>
             <li><Link href="/legal/privacy">Privacy</Link></li>
@@ -31,13 +31,11 @@ const Footer = () => {
         </div>
         {/* Sitemap Column */}
         <div>
-          <h3 className="mb-4 font-semibold text-lg text-code">Sitemap</h3>
+          <h3 className="mb-4 text-lg font-semibold text-code">Sitemap</h3>
           <ul className="flex flex-col gap-3 text-gray-400">
             <li><Link href="/">Home</Link></li>
             <li><Link href="/events">Events</Link></li>
-            <li><Link href="/generate-image">Image Generator</Link></li>
-            <li><Link href={"/sign-up"}>Sign Up</Link></li>
-            <li><Link href={"/sign-in"}>Sign In</Link></li>
+            <li><Link href="https://events.adsc.atmiya.in">EMS</Link></li>
           </ul>
         </div>
       </div>
