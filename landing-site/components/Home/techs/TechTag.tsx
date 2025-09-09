@@ -1,4 +1,4 @@
-import { MagicCard } from '../ui/magic-card';
+import { MagicCard } from '@/components/ui/magic-card';
 
 const TechTag = ({
   gradientColor,
@@ -13,7 +13,7 @@ const TechTag = ({
       gradientColor={gradientColor}
       gradientOpacity={0.25}
     >
-      <p className="font-Silkscreen text-sm text-whiteice">{title}</p>
+      <p className="text-sm font-Silkscreen text-whiteice">{title}</p>
     </MagicCard>
   );
 };

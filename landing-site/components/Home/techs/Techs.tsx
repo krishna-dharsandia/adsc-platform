@@ -1,11 +1,11 @@
 import { slugs, techs } from "@/constants/skills";
-import DotPattern from "../ui/dot-pattern";
-import IconCloud from "../ui/icon-cloud";
+import DotPattern from "@/components/ui/dot-pattern";
+import IconCloud from "@/components/ui/icon-cloud";
 import TechTag from "./TechTag";
 
 const Techs = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center overflow-hidden px-6 py-24">
+    <section className="relative flex flex-col items-center justify-center px-6 py-24 overflow-hidden">
       <div className="relative">
         <div className="flex flex-col items-center justify-center gap-8 rounded-lg bg-none">
           <p className="regular-paragraph z-10 max-w-[850px] md:text-center">
@@ -24,7 +24,7 @@ const Techs = () => {
         </div>
       </div>
 
-      <DotPattern width={20} height={20} cx={1} cy={1} cr={1} className="dot-pattern bottom-0 border opacity-50" />
+      <DotPattern width={20} height={20} cx={1} cy={1} cr={1} className="bottom-0 border opacity-50 dot-pattern" />
     </section>
   );
 };

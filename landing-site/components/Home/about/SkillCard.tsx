@@ -1,5 +1,5 @@
 import React from 'react';
-import { MagicCard } from '../ui/magic-card';
+import { MagicCard } from "@/components/ui/magic-card";
 
 type SkillCardProps = {
   gradientColor: string;

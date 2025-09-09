@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { MagicCard } from "../ui/magic-card";
+import { MagicCard } from "@/components/ui/magic-card";
 import { TeamMember } from "@/types/type";
 import { LinkedinIcon, GithubIcon, TwitterIcon } from "lucide-react";
 import Link from "next/link";
@@ -11,11 +11,11 @@ const TeamMemberCard = ({ img, name, role, department, socialLinks = {}, bgGradi
 
   return (
     <MagicCard className="h-[240px] w-[460px] cursor-pointer border-none bg-background text-white" gradientColor={bgGradientColor} gradientOpacity={0.2}>
-      <div className="relative flex flex-row gap-x-6 p-6">
+      <div className="relative flex flex-row p-6 gap-x-6">
         {/* Profile Image and Basic Info */}
         <div className="flex flex-col items-center gap-y-4">
           <div className="size-[140px] rounded-md">
-            <Image className="rounded-full border-4 border-white object-cover shadow-lg " width="140" height="140" alt={`${name}'s profile`} src={img} />
+            <Image className="object-cover border-4 border-white rounded-full shadow-lg " width="140" height="140" alt={`${name}'s profile`} src={img} />
           </div>
 
           {/* Social Links */}
@@ -39,7 +39,7 @@ const TeamMemberCard = ({ img, name, role, department, socialLinks = {}, bgGradi
         </div>
 
         <div className="space-y-3">
-          <div className="inline-block rounded-md bg-blue-600/50 px-3 py-1 text-xs font-semibold">{role}</div>
+          <div className="inline-block px-3 py-1 text-xs font-semibold rounded-md bg-blue-600/50">{role}</div>
           <div className="">
             <h3 className="mt-4 text-xl font-bold">{name}</h3>
             <p className="text-sm text-gray-300">{department}</p>
@@ -47,9 +47,9 @@ const TeamMemberCard = ({ img, name, role, department, socialLinks = {}, bgGradi
 
           {/* Expertise Badges */}
           <div>
-            <div className="flex flex-wrap items-center  gap-2">
+            <div className="flex flex-wrap items-center gap-2">
               {displayedExpertise.map((skill) => (
-                <span key={skill} className="rounded-md bg-blue-500/30 px-2 py-1 text-xs">
+                <span key={skill} className="px-2 py-1 text-xs rounded-md bg-blue-500/30">
                   {skill}
                 </span>
               ))}
@@ -59,12 +59,12 @@ const TeamMemberCard = ({ img, name, role, department, socialLinks = {}, bgGradi
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger className="h-full">
-                        <span className="h-full rounded-md bg-blue-500/30 px-2 py-1 text-xs">+{hiddenExpertise.length}</span>
+                        <span className="h-full px-2 py-1 text-xs rounded-md bg-blue-500/30">+{hiddenExpertise.length}</span>
                       </TooltipTrigger>
                       <TooltipContent>
                         <div className="z-50 flex flex-col gap-y-2">
                           {hiddenExpertise.map((skill) => (
-                            <span key={skill} className="rounded-md bg-blue-500/30 px-2 py-1 text-xs">
+                            <span key={skill} className="px-2 py-1 text-xs rounded-md bg-blue-500/30">
                               {skill}
                             </span>
                           ))}
