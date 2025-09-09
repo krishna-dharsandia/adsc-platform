@@ -24,6 +24,7 @@ export const metadata: Metadata = {
   creator: "Atmiya Developer Student  Club",
   applicationName: "Atmiya Developer Student  Club",
   keywords: ["ADSC", "Atmiya Developer Student Club", "Student Developer Community", "Software Development", "Tech Workshops", "Developer Guidance", "Atmiya University", "Programming Events"],
+  metadataBase: new URL("https://adsc-atmiya.in"),
   icons: {
     icon: "./favicon.ico",
     apple: "/ADSC-Icons/apple-touch-icon.png",

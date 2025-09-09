@@ -40,6 +40,13 @@ export const contacts = [
     icon: "/icons/github.svg",
     description: "Check out our projects and contribute on GitHub.",
     path: "https://github.com/atmiya-Developer-Students-Club"
+  },
+  {
+    id: "youtube",
+    title: "YouTube",
+    icon: "/icons/youtube.svg",
+    description: "Subscribe to our YouTube channel for tutorials and more.",
+    path: "https://www.youtube.com/@AtmiyaDeveloperStudentClub"
   }
 ];
 
@@ -79,5 +86,11 @@ export const socialLinks = [
     icon: "/icons/github.svg",
     alt: "Link to ADSC's GitHub profile",
     path: "https://github.com/atmiya-Developer-Students-Club"
+  },
+  {
+    id: "youtube",
+    icon: "/icons/youtube.svg",
+    alt: "Link to ADSC's YouTube channel",
+    path: "https://www.youtube.com/@AtmiyaDeveloperStudentClub"
   }
 ];
