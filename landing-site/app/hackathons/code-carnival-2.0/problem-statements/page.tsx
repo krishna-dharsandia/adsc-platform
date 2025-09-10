@@ -20,8 +20,9 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import localFont from "next/font/local";
-import { problemStatements, categories } from "@/components/hackathons/code-carnival-2.0/problem-statement-constants";
+import { problemStatements, categories, ProblemStatement } from "@/components/hackathons/code-carnival-2.0/problem-statement-constants";
 import { COLOR } from "@/components/hackathons/code-carnival-2.0/constants";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 const gameOfSquids = localFont({
   src: [
@@ -38,6 +39,8 @@ export default function Page() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
   const [filteredProblems, setFilteredProblems] = useState(problemStatements);
+  const [openDialog, setOpenDialog] = useState(false);
+  const [selectedProblem, setSelectedProblem] = useState<ProblemStatement | null>(null);
 
   useEffect(() => {
     let filtered = [...problemStatements];
@@ -158,6 +161,10 @@ export default function Page() {
                         </TableCell>
                         <TableCell className="text-right">
                           <Button
+                            onClick={() => {
+                              setOpenDialog(true);
+                              setSelectedProblem(ps);
+                            }}
                             variant="outline"
                             className="text-white bg-[#5A4A4A] hover:text-white hover:bg-pink-900/50"
                             style={{
@@ -205,6 +212,31 @@ export default function Page() {
           </div>
         </div>
       </section>
+      {selectedProblem && (
+        <Dialog open={openDialog} onOpenChange={setOpenDialog}>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>{selectedProblem.title}</DialogTitle>
+              <DialogDescription className="flex flex-col sm:flex-row gap-2 sm:gap-4">
+                <Pill data={selectedProblem.code} />
+                <Pill data={selectedProblem.category} />
+                <Pill data={selectedProblem.by} />
+              </DialogDescription>
+            </DialogHeader>
+            <div>
+              <p className="text-white/90">{selectedProblem.description}</p>
+            </div>
+          </DialogContent>
+        </Dialog>
+      )}
     </div>
   );
+}
+
+function Pill({ data }: { data: string }) {
+  return (
+    <div className="px-4 py-1 rounded-full bg-pink-900/40 border border-pink-400 text-white font-mono text-sm flex justify-center items-center">
+      {data}
+    </div>
+  )
 }
