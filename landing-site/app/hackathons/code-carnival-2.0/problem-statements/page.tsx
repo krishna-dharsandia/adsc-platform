@@ -22,7 +22,7 @@ import {
 import localFont from "next/font/local";
 import { problemStatements, categories, ProblemStatement } from "@/components/hackathons/code-carnival-2.0/problem-statement-constants";
 import { COLOR } from "@/components/hackathons/code-carnival-2.0/constants";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 const gameOfSquids = localFont({
   src: [
