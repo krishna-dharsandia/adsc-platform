@@ -47,7 +47,11 @@ export default function Page() {
 
     // Filter by category
     if (selectedCategory !== "All Categories") {
-      filtered = filtered.filter(ps => ps.category === selectedCategory);
+      filtered = filtered.filter(ps =>
+        Array.isArray(ps.category)
+          ? ps.category.includes(selectedCategory)
+          : false
+      );
     }
 
     // Filter by search query
@@ -152,7 +156,11 @@ export default function Page() {
                       <TableRow key={ps.code} className="hover:bg-background/5 border-t border-white/10">
                         <TableCell className="font-mono text-white/80">{ps.code}</TableCell>
                         <TableCell className="font-semibold" style={{ color: COLOR.lightpink }}>{ps.title}</TableCell>
-                        <TableCell className="text-white/80">{ps.category}</TableCell>
+                        <TableCell className="text-white/80 flex flex-col sm:flex-row gap-2 sm:gap-4">
+                          {Array.isArray(ps.category)
+                            ? ps.category.map((cat: string) => <Pill key={cat} data={cat} />)
+                            : <Pill data={ps.category} />}
+                        </TableCell>
                         <TableCell className="text-white/80">{ps.by}</TableCell>
                         <TableCell className="text-white/80">
                           <div className="line-clamp-3 text-sm">
@@ -219,12 +227,17 @@ export default function Page() {
               <DialogTitle>{selectedProblem.title}</DialogTitle>
               <DialogDescription className="flex flex-col sm:flex-row gap-2 sm:gap-4">
                 <Pill data={selectedProblem.code} />
-                <Pill data={selectedProblem.category} />
+                {Array.isArray(selectedProblem.category)
+                  ? selectedProblem.category.map((cat: string) => <Pill key={cat} data={cat} />)
+                  : <Pill data={selectedProblem.category} />}
                 <Pill data={selectedProblem.by} />
               </DialogDescription>
             </DialogHeader>
-            <div>
-              <p className="text-white/90">{selectedProblem.description}</p>
+            <div className="flex-wrap">
+              <p className="text-white font-bold">Statement</p>
+              <p className="text-white/90 mt-2">{selectedProblem.description}</p>
+              <p className="text-white font-bold mt-4">Expected Solution</p>
+              <p className="text-white/90 mt-2">{selectedProblem.solution}</p>
             </div>
           </DialogContent>
         </Dialog>

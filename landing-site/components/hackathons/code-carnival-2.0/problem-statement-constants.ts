@@ -1,38 +1,42 @@
 export interface ProblemStatement {
   code: string;
   title: string;
-  category: string;
+  category: string[];
   by: string;
   description: string;
+  solution: string;
 }
 
 export const problemStatements: ProblemStatement[] = [
   {
-    code: "PS001",
+    code: "PS-01",
     title: "AI-Powered Learning Assistant",
-    category: "Artificial Intelligence",
+    category: ["AI", "Web Development"],
     by: "TechInnovate Solutions",
-    description: "Design and develop an AI-powered learning assistant that can help students understand complex topics by breaking them down into simpler concepts. The assistant should be able to generate customized learning paths based on the student's learning style and pace."
+    description: "Design and develop an AI-powered learning assistant that can help students understand complex topics by breaking them down into simpler concepts. The assistant should be able to generate customized learning paths based on the student's learning style and pace.",
+    solution: "Implement a chatbot using NLP techniques to interact with students and provide personalized learning resources."
   },
   {
     code: "PS002",
     title: "Blockchain-Based Voting System",
-    category: "Blockchain",
+    category: ["Blockchain"],
     by: "ADSC Club",
-    description: "Create a secure and transparent voting system using blockchain technology that ensures the integrity of votes while maintaining voter anonymity. The system should be resistant to tampering and provide a way to verify that votes have been counted correctly."
+    description: "Create a secure and transparent voting system using blockchain technology that ensures the integrity of votes while maintaining voter anonymity. The system should be resistant to tampering and provide a way to verify that votes have been counted correctly.",
+    solution: "Develop a decentralized application (dApp) using smart contracts on a blockchain platform to facilitate secure voting."
   },
   {
     code: "PS003",
     title: "Smart Campus Energy Management",
-    category: "IoT",
+    category: ["IoT"],
     by: "GreenTech Innovations",
-    description: "Develop an IoT solution to monitor and optimize energy consumption across campus buildings. The system should collect real-time data on energy usage, identify patterns, suggest optimizations, and allow for remote control of connected devices to reduce energy waste."
+    description: "Develop an IoT solution to monitor and optimize energy consumption across campus buildings. The system should collect real-time data on energy usage, identify patterns, suggest optimizations, and allow for remote control of connected devices to reduce energy waste.",
+    solution: "Implement a network of IoT sensors to track energy usage and a central dashboard for monitoring and controlling energy consumption."
   }
 ];
 
 export const categories = [
   "All Categories",
-  "Artificial Intelligence",
+  "AI",
   "Blockchain",
   "IoT",
   "Web Development",
