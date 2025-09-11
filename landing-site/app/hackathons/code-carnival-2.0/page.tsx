@@ -9,7 +9,8 @@ import {
   howToParticipateData,
   baselineRewardsData,
   seasonalPrizesData,
-  rulesData
+  rulesData,
+  evaluationCriteriaData
 } from "@/components/hackathons/code-carnival-2.0/constants";
 
 const gameOfSquids = localFont({
@@ -244,6 +245,34 @@ export default function Page() {
                 <CardHeader>
                   <CardTitle className="text-xl text-white">{rule.title}</CardTitle>
                   <CardDescription className="text-white/80">{rule.description}</CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Evaluation Criteria Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className={`text-4xl font-bold mb-4 ${gameOfSquids.className}`}>Evaluation Criteria</h2>
+            <div className="font-mono text-pink-400">Projects will be judged on the following aspects</div>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {evaluationCriteriaData.map((criteria, index) => (
+              <Card key={index} style={{
+                background: "linear-gradient(135deg, #403D3D 60%, #5A4A4A 100%)",
+                border: `2px solid ${COLOR.pink}`,
+                minHeight: "160px",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}>
+                <CardHeader className="flex flex-col items-center justify-center">
+                  <CardTitle className="text-xl text-white mb-2 text-center">{criteria.title}</CardTitle>
+                  <CardDescription className="text-white/80 text-center text-sm">{criteria.description}</CardDescription>
                 </CardHeader>
               </Card>
             ))}

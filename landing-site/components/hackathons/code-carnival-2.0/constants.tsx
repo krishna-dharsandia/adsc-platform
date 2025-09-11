@@ -140,3 +140,16 @@ export const rulesData = [
     description: "Participants are responsible for their equipment and belongings."
   }
 ];
+
+export const evaluationCriteriaData = [
+  { title: "Creativity", description: "Originality and uniqueness of the idea." },
+  { title: "Functionality", description: "How well the solution works and meets requirements." },
+  { title: "Presentation", description: "Clarity and effectiveness of the project presentation." },
+  { title: "Technical Proficiency", description: "Skillful use of technology and tools." },
+  { title: "Scalability", description: "Potential for growth and adaptability." },
+  { title: "Problem Solving", description: "Effectiveness in addressing the challenge." },
+  { title: "Teamwork", description: "Collaboration and communication within the team." },
+  { title: "Innovation", description: "Forward-thinking and inventive approaches." },
+  { title: "Social Impact", description: "Positive effect on society or community." },
+  { title: "Documentation", description: "Quality and completeness of project documentation." },
+];
