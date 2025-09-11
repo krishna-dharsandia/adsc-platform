@@ -49,6 +49,7 @@ export const hackathons: Hackathon[] = [
     tags: ["AI/ML", "WEB3", "IoT", "react", "node.js", "express", "mongodb", "bootstrap", "github", "figma", "problem-solving"],
     description: "AU Internal Hackathon was a 12-hour non-stop coding event exclusively for Atmiya University students. Participants tackled diverse problem statements from cutting-edge technologies such as AI/ML, WEB3, IoT, and more. The hackathon fostered innovation, teamwork, and technical excellence, providing a platform for students to showcase their skills and creativity.",
     date: "Mar 22, 2025",
+    viewUrl: "https://youtube.com/shorts/5K2EVZiomao",
     registerUrl: "https://forms.gle/s6dhfVKgCCdFgz7m9",
     color: "rgba(200,100,247)", // Purple
     btnBg: "rgba(126,34,206,0.5)",
