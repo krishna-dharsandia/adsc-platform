@@ -105,3 +105,38 @@ export const seasonalPrizesData = [
     gradient: "linear-gradient(135deg, #5A4A4A 60%, #E9B2B2 100%)",
   }
 ];
+
+export const rulesData = [
+  {
+    title: "Eligibility",
+    description: "Open to current Atmiya University students."
+  },
+  {
+    title: "Code of Conduct",
+    description: "Follow a code of conduct promoting respectful behaviour."
+  },
+  {
+    title: "Team Collaboration",
+    description: "Collaboration is encouraged within teams but no plagiarism."
+  },
+  {
+    title: "Technology Stack",
+    description: "Free choice of technology stack and tools."
+  },
+  {
+    title: "Demo and Presentation",
+    description: "Present and demonstrate projects to judges."
+  },
+  {
+    title: "Time Management",
+    description: "Adhere to the hackathon schedule."
+  },
+  {
+    title: "Organizer's Discretion",
+    description: "Organizers may disqualify rule-violating teams."
+  },
+  {
+    title: "Liability",
+    description: "Participants are responsible for their equipment and belongings."
+  }
+];

@@ -8,7 +8,8 @@ import {
   whoCanJoinData,
   howToParticipateData,
   baselineRewardsData,
-  seasonalPrizesData
+  seasonalPrizesData,
+  rulesData
 } from "@/components/hackathons/code-carnival-2.0/constants";
 
 const gameOfSquids = localFont({
@@ -84,7 +85,7 @@ export default function Page() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className={`text-4xl font-bold mb-4 ${gameOfSquids.className}`}>Hackathon Timeline</h2>
-            <div className="font-mono text-">Starts 15th September</div>
+            <div className="font-mono text-pink-400">Starts 15th September</div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -203,6 +204,7 @@ export default function Page() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className={`text-4xl font-bold mb-4 ${gameOfSquids.className}`}>How to Participate</h2>
+            <div className="font-mono text-pink-400">Please watch demo video: <Link href={""} className="underline">Watch Registeration Demo Video</Link></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
@@ -219,6 +221,29 @@ export default function Page() {
                   <CardDescription className="text-white/50">
                     {item.description}
                   </CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Rules & Regulations Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className={`text-4xl font-bold mb-4 ${gameOfSquids.className}`}>Rules & Regulations</h2>
+            <div className="font-mono text-pink-400">Please read carefully before participating</div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {rulesData.map((rule, index) => (
+              <Card key={index} style={{
+                background: "linear-gradient(135deg, #403D3D 60%, #5A4A4A 100%)",
+                border: `2px solid ${COLOR.pink}`,
+              }}>
+                <CardHeader>
+                  <CardTitle className="text-xl text-white">{rule.title}</CardTitle>
+                  <CardDescription className="text-white/80">{rule.description}</CardDescription>
                 </CardHeader>
               </Card>
             ))}
