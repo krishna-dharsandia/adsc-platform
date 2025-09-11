@@ -109,7 +109,7 @@ export const seasonalPrizesData = [
 export const rulesData = [
   {
     title: "Eligibility",
-    description: "Open to current Atmiya University students."
+    description: "Open to all University students."
   },
   {
     title: "Code of Conduct",
