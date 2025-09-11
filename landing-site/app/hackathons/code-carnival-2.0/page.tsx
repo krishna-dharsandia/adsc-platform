@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import localFont from "next/font/local"
@@ -12,6 +14,8 @@ import {
   rulesData,
   evaluationCriteriaData
 } from "@/components/hackathons/code-carnival-2.0/constants";
+import { useEffect, useRef, useState } from "react";
+import { Play, Pause } from "lucide-react";
 
 const gameOfSquids = localFont({
   src: [
@@ -25,8 +29,44 @@ const gameOfSquids = localFont({
 });
 
 export default function Page() {
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = 0.5;
+      audioRef.current.play();
+    }
+  }, []);
+
+  const toggleAudio = () => {
+    if (!audioRef.current) return;
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground">
+      {/* Background Music Audio Element */}
+      <audio ref={audioRef} src="/bg-music/background-music.mp3" loop />
+      {/* Floating Play/Pause Button */}
+      <button
+        onClick={toggleAudio}
+        className="fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-lg"
+        style={{
+          background: "linear-gradient(135deg, #403D3D 60%, #5A4A4A 100%)",
+          border: `2px solid ${COLOR.pink}`,
+          color: "#fff",
+        }}
+        aria-label={isPlaying ? "Pause music" : "Play music"}
+      >
+        {isPlaying ? <Pause size={24} /> : <Play size={24} />}
+      </button>
+
       <section className="py-20 px-4 text-center min-h-screen flex align-center justify-center">
         <div className="max-w-4xl mx-auto flex flex-col justify-center items-center">
           <div
