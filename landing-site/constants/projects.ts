@@ -111,5 +111,25 @@ export const events: Event[] = [
     btnBg: "rgba(29,78,216,0.5)",
     btnBgHover: "rgba(30,58,138)",
     cardBg: "rgba(29,78,216,0.05)",
+  },
+  {
+    id: "7",
+    image: "/images/events/web3-simplified.png",
+    name: "Web3 Simplified - Workshop",
+    category: "Decentralized Web & Blockchain Basics",
+    tags: [
+      "Web3 Fundamentals",
+      "Blockchain Basics",
+      "Smart Contracts",
+      "Hands-on DApp Development"
+    ],
+    description:
+      "A comprehensive workshop aimed at demystifying Web3 and blockchain technology. Participants will learn the core concepts of Web3, understand how blockchain works, explore the role of smart contracts, and gain practical experience in building decentralized applications (DApps). This session is perfect for beginners and anyone interested in the future of the internet and decentralized technologies. Held on 5th September 2025 at 422 Seminar Hall, B Wing, Atmiya University.",
+    date: "Sep 16, 2025",
+    registerUrl: "https://events.adsc-atmiya.in/events/854f54b3-a748-4b44-89db-9cd7557e8a75",
+    color: "rgba(168,85,247)", // Purple
+    btnBg: "rgba(126,34,206,0.5)",
+    btnBgHover: "rgba(88,28,135)",
+    cardBg: "rgba(126,34,206,0.05)",
   }
 ];
