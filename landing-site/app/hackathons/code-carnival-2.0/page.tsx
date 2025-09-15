@@ -101,7 +101,7 @@ export default function Page() {
                 border: `2px solid ${COLOR.pink}`,
               }}
             >
-              <Link href={"https://events.adsc-atmiya.in/events/"}>
+              <Link href={"https://events.adsc-atmiya.in/hackathons/475469d6-03ac-4894-8761-8200ea7f1a26"}>
                 REGISTER NOW
               </Link>
             </Button>
@@ -336,7 +336,9 @@ export default function Page() {
                   border: `2px solid ${COLOR.pink}`,
                 }}
               >
-                REGISTER NOW
+                <Link href={"https://events.adsc-atmiya.in/hackathons/475469d6-03ac-4894-8761-8200ea7f1a26"}>
+                  REGISTER NOW
+                </Link>
               </Button>
               <Button
                 size="lg"

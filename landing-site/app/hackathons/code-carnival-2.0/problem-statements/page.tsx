@@ -23,6 +23,7 @@ import localFont from "next/font/local";
 import { problemStatements, categories, ProblemStatement } from "@/components/hackathons/code-carnival-2.0/problem-statement-constants";
 import { COLOR } from "@/components/hackathons/code-carnival-2.0/constants";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import Link from "next/link";
 
 const gameOfSquids = localFont({
   src: [
@@ -214,7 +215,9 @@ export default function Page() {
                   border: `2px solid ${COLOR.pink}`,
                 }}
               >
-                REGISTER NOW
+                <Link href={"https://events.adsc-atmiya.in/master/hackathons/475469d6-03ac-4894-8761-8200ea7f1a26"}>
+                  REGISTER NOW
+                </Link>
               </Button>
             </div>
           </div>
