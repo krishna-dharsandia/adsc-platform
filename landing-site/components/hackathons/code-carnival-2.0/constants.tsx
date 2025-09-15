@@ -91,17 +91,17 @@ export const baselineRewardsData = [
 export const seasonalPrizesData = [
   {
     rank: "#1",
-    prize: "10,000 INR",
+    prize: "30,000 INR",
     gradient: "linear-gradient(135deg, #E9B2B2 60%, #FFE4E4 100%)",
   },
   {
     rank: "#2",
-    prize: "5,000 INR",
+    prize: "20,000 INR",
     gradient: "linear-gradient(135deg, #403D3D 60%, #5A4A4A 100%)",
   },
   {
     rank: "#3",
-    prize: "2,000 INR",
+    prize: "10,000 INR",
     gradient: "linear-gradient(135deg, #5A4A4A 60%, #E9B2B2 100%)",
   }
 ];

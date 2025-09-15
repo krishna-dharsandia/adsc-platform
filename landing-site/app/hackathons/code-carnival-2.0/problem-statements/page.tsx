@@ -225,7 +225,7 @@ export default function Page() {
           <DialogContent>
             <DialogHeader>
               <DialogTitle>{selectedProblem.title}</DialogTitle>
-              <DialogDescription className="flex flex-col sm:flex-row gap-2 sm:gap-4">
+              <DialogDescription className="flex flex-col gap-2 sm:gap-4">
                 <Pill data={selectedProblem.code} />
                 {Array.isArray(selectedProblem.category)
                   ? selectedProblem.category.map((cat: string) => <Pill key={cat} data={cat} />)
