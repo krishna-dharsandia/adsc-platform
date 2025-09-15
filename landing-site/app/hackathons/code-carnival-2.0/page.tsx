@@ -85,7 +85,7 @@ export default function Page() {
           <div className="text-sm font-mono mb-6 tracking-widest">
             Industry Powered • Problem Statements
           </div>
-          <h1 className={`text-6xl md:text-7xl font-bold mb-8 ${gameOfSquids.className}`}>Code Carnival 2.0</h1>
+          <h1 className={`text-6xl md:text-7xl font-bold mb-8 ${gameOfSquids.className}`}>Code Carnival Season 2</h1>
           <p className="text-2xl md:text-3xl font-bold mb-10 text-pink-400">
             Win from a massive ₹60,000+ prize pool!
           </p>

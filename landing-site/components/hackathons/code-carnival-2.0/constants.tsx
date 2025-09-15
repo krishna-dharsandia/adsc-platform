@@ -14,19 +14,19 @@ export const timelineData = [
   },
   {
     phase: "Phase 2",
-    date: "2nd to 3rd Oct",
+    date: "4th to 5th Oct",
     title: "Hacking",
     description: "Build your innovative solutions."
   },
   {
     phase: "Phase 3",
-    date: "3rd Oct",
+    date: "4th & 5th Oct",
     title: "Judging",
     description: "Present your projects to the judges."
   },
   {
     phase: "Phase 4",
-    date: "3rd Oct",
+    date: "5th Oct",
     title: "Winners",
     description: "Announce the winners and celebrate."
   }
