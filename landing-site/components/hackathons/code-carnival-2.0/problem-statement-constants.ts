@@ -331,5 +331,5 @@ export const problemStatements: ProblemStatement[] = [
 ];
 
 export const categories = [
-  "AI", "Web Development", "App Development", "Cloud Computing", "Cybersecurity", "Mobile Development", "IoT", "Blockchain", "Game Development", "AR / VR", "App Developement", "Web Developement", "EV", "Student Innovation"
+  "All Categories", "AI", "Web Development", "App Development", "Cloud Computing", "Cybersecurity", "Mobile Development", "IoT", "Blockchain", "Game Development", "AR / VR", "App Developement", "Web Developement", "EV", "Student Innovation"
 ];
