@@ -8,7 +8,7 @@ export const COLOR = {
 export const timelineData = [
   {
     phase: "Phase 1",
-    date: "15th to 30th Sept",
+    date: "15th to 29th Sept",
     title: "Registration",
     description: "Register your team and get ready to code."
   },
