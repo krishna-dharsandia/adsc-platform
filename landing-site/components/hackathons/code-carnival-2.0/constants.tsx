@@ -34,10 +34,6 @@ export const timelineData = [
 
 export const whoCanJoinData = [
   {
-    title: "Hackathon Alumni",
-    description: "Every hacker is a potential builder."
-  },
-  {
     title: "Solo & Teams",
     description: "Individual developers or full teams welcome."
   },
