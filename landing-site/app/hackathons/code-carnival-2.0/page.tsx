@@ -223,7 +223,7 @@ export default function Page() {
             <h2 className={`text-4xl font-bold mb-4 ${gameOfSquids.className}`}>Who Can Join?</h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {whoCanJoinData.map((item, index) => (
               <Card key={index} className="text-center" style={{
                 background: "linear-gradient(135deg, #403D3D 60%, #5A4A4A 100%)",
