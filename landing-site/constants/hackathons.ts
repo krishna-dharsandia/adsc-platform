@@ -63,8 +63,8 @@ export const hackathons: Hackathon[] = [
     category: "Open Hackathon",
     tags: ["react", "node.js", "express", "mongodb", "bootstrap", "github", "figma", "problem-solving"],
     description: "Code Carnival 2.0 is India's premier national-level hackathon, bringing together top talent to solve industry-powered problem statements. Participants collaborate, innovate, and compete for exciting prizes in a vibrant, inclusive environment. Showcase your skills, build impactful solutions, and win from a massive prize pool. Join us to learn, network, and make your mark at Code Carnival 2.0!",
-    date: "Oct 2, 2025",
-    registerUrl: "https://events.adsc-atmiya.in/events",
+    date: "Oct 4, 2025",
+    registerUrl: "https://events.adsc-atmiya.in/hackathons/475469d6-03ac-4894-8761-8200ea7f1a26",
     color: "rgba(236,72,153)", // Pink (Squid Game style)
     btnBg: "rgba(219,39,119,0.5)",
     btnBgHover: "rgba(190,24,93)",

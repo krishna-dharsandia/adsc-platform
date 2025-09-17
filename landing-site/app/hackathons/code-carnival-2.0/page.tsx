@@ -119,6 +119,7 @@ export default function Page() {
               </Link>
             </Button>
           </div>
+          <iframe className="mt-10" width="560" height="315" src="https://www.youtube.com/embed/61e3kVh6-bY?si=OWe7GrMTlrlJ3Y1U" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
         </div>
       </section>
 
@@ -245,7 +246,7 @@ export default function Page() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className={`text-4xl font-bold mb-4 ${gameOfSquids.className}`}>How to Participate</h2>
-            <div className="font-mono text-pink-400">Please watch demo video: <Link href={""} className="underline">Watch Registeration Demo Video</Link></div>
+            <div className="font-mono text-pink-400">Please watch demo video: <Link href={"https://youtu.be/61e3kVh6-bY"} target="_blank" className="underline">Watch Registeration Demo Video</Link></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
