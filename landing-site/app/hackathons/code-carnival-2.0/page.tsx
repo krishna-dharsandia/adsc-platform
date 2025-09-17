@@ -208,7 +208,10 @@ export default function Page() {
                   }}>
                     <div className="flex items-center gap-3">
                       <div className="text-2xl">{prize.rank}</div>
-                      <div className="text-white font-semibold">{prize.prize}</div>
+                      <div className="text-white font-semibold">
+                        {prize.prize}
+                        <sup>*</sup>
+                      </div>
                     </div>
                   </div>
                 ))}
