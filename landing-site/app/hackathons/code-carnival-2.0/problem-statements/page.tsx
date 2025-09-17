@@ -22,7 +22,7 @@ import {
 import localFont from "next/font/local";
 import { problemStatements, categories, ProblemStatement } from "@/components/hackathons/code-carnival-2.0/problem-statement-constants";
 import { COLOR } from "@/components/hackathons/code-carnival-2.0/constants";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import Link from "next/link";
 
 const gameOfSquids = localFont({
@@ -236,12 +236,19 @@ export default function Page() {
                 <Pill data={selectedProblem.by} />
               </DialogDescription>
             </DialogHeader>
-            <div className="flex-wrap">
+            <div className="flex-wrap overflow-auto max-h-[60vh] mt-4">
               <p className="text-white font-bold">Statement</p>
               <p className="text-white/90 mt-2">{selectedProblem.description}</p>
               <p className="text-white font-bold mt-4">Expected Solution</p>
               <p className="text-white/90 mt-2">{selectedProblem.solution}</p>
             </div>
+            <DialogFooter className="sm:justify-start">
+              <DialogClose asChild>
+                <Button type="button" variant="secondary">
+                  Close
+                </Button>
+              </DialogClose>
+            </DialogFooter>
           </DialogContent>
         </Dialog>
       )}

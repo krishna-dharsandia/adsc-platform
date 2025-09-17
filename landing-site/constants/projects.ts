@@ -73,7 +73,7 @@ export const events: Event[] = [
   },
   {
     id: "5",
-    image: "/images/events/discord-linkedin-unlocked.jpg",
+    image: "/images/events/discord-linkedin-unlocked.png",
     name: "LinkedIn Unlocked: Discord Event",
     category: "Live LinkedIn Profile Reviews & Optimization",
     tags: [
@@ -114,7 +114,7 @@ export const events: Event[] = [
   },
   {
     id: "7",
-    image: "/images/events/web3-simplified.png",
+    image: "/images/events/web3-simplified.jpg",
     name: "Web3 Simplified - Workshop",
     category: "Decentralized Web & Blockchain Basics",
     tags: [

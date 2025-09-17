@@ -49,7 +49,6 @@ export const hackathons: Hackathon[] = [
     tags: ["AI/ML", "WEB3", "IoT", "react", "node.js", "express", "mongodb", "bootstrap", "github", "figma", "problem-solving"],
     description: "AU Internal Hackathon was a 12-hour non-stop coding event exclusively for Atmiya University students. Participants tackled diverse problem statements from cutting-edge technologies such as AI/ML, WEB3, IoT, and more. The hackathon fostered innovation, teamwork, and technical excellence, providing a platform for students to showcase their skills and creativity.",
     date: "Mar 22, 2025",
-    viewUrl: "https://youtube.com/shorts/5K2EVZiomao",
     registerUrl: "https://forms.gle/s6dhfVKgCCdFgz7m9",
     color: "rgba(200,100,247)", // Purple
     btnBg: "rgba(126,34,206,0.5)",
@@ -58,12 +57,13 @@ export const hackathons: Hackathon[] = [
   },
   {
     id: "4",
-    image: "/images/events/au-hackthon.webp",
+    image: "/images/events/code-carnival-season-2.jpeg",
     name: "Code Carnival 2.0",
     category: "Open Hackathon",
     tags: ["react", "node.js", "express", "mongodb", "bootstrap", "github", "figma", "problem-solving"],
     description: "Code Carnival 2.0 is India's premier national-level hackathon, bringing together top talent to solve industry-powered problem statements. Participants collaborate, innovate, and compete for exciting prizes in a vibrant, inclusive environment. Showcase your skills, build impactful solutions, and win from a massive prize pool. Join us to learn, network, and make your mark at Code Carnival 2.0!",
     date: "Oct 4, 2025",
+    viewUrl: "https://adsc-atmiya.in/hackathons/code-carnival-2-0",
     registerUrl: "https://events.adsc-atmiya.in/hackathons/475469d6-03ac-4894-8761-8200ea7f1a26",
     color: "rgba(236,72,153)", // Pink (Squid Game style)
     btnBg: "rgba(219,39,119,0.5)",

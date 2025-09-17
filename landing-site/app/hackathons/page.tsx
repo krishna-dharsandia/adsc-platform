@@ -37,7 +37,7 @@ export default function Page() {
                 ))}
               </div>
             </CardContent>
-            <CardFooter>
+            <CardFooter className="flex gap-2">
               {Hackthon.viewUrl && (
                 <Button size="sm">
                   <a
