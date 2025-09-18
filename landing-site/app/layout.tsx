@@ -5,6 +5,7 @@ import { Inter, Silkscreen } from "next/font/google";
 import Footer from "@/components/layout/Footer";
 import NavBar from "@/components/layout/NavBar";
 import "./globals.css";
+import { Providers } from "@/components/global/provider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -65,12 +66,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${silkscreen.variable} relative`}>
-        <main>
-          <NavBar />
-          {children}
-        </main>
-        <Footer />
-        <div className="absolute inset-0 pointer-events-none main-mask -z-50" />
+        <Providers>
+          <main>
+            <NavBar />
+            {children}
+          </main>
+          <Footer />
+          <div className="absolute inset-0 pointer-events-none main-mask -z-50" />
+        </Providers>
       </body>
     </html>
   );
