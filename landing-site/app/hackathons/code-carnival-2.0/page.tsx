@@ -67,8 +67,8 @@ export default function Page() {
         {isPlaying ? <Pause size={24} /> : <Play size={24} />}
       </button>
 
-      <section className="py-20 px-4 text-center min-h-screen flex align-center justify-center">
-        <div className="max-w-4xl mx-auto flex flex-col justify-center items-center">
+      <section className="py-20 px-4 text-center min-h-screen flex items-center justify-center">
+        <div className="max-w-4xl mx-auto flex flex-col justify-center items-center w-full">
           <div
             className="inline-block px-6 py-2 rounded-full mb-8"
             style={{
@@ -119,7 +119,19 @@ export default function Page() {
               </Link>
             </Button>
           </div>
-          <iframe className="mt-10" width="560" height="315" src="https://www.youtube.com/embed/61e3kVh6-bY?si=OWe7GrMTlrlJ3Y1U" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+          <div className="w-full mt-10 flex justify-center">
+            <div className="w-full" style={{ maxWidth: 560 }}>
+              <div className="relative pb-[56.25%] h-0 w-full">
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full rounded-lg"
+                  src="https://www.youtube.com/embed/61e3kVh6-bY?si=OWe7GrMTlrlJ3Y1U"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
