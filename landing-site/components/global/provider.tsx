@@ -1,9 +1,8 @@
 "use client";
-
+import { ReactNode, useEffect } from "react";
 import { logFiglet } from "@/utils/other/art";
-import { useEffect } from "react";
 
-export function Providers({ children }: { children: React.ReactNode }) {
+export function Providers({ children }: { children: ReactNode }) {
   useEffect(() => {
     logFiglet('A D S C');
   }, [])
