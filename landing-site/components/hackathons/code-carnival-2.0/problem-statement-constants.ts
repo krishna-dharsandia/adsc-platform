@@ -327,6 +327,14 @@ export const problemStatements: ProblemStatement[] = [
     by: "ADSC",
     description: "Students frequently misplace items such as ID cards, books, or accessories on campus, but there is no centralized way to report or find them.",
     solution: "Create a simple mobile/web app where students can post lost or found items with descriptions/photos. Other students can search and contact the finder/owner. Bonus: Add filters (by category, date, location) for easier searching."
+  },
+  {
+    code: 'PS-41',
+    title: "Smart Document Merger – A Tool for Seamless Document Consolidation",
+    category: ["Web Development", "App Development"],
+    by: "ADSC",
+    solution: "A web or desktop application that allows users to upload multiple documents (Word, PDF, etc.) and automatically merges them into a single, well-formatted document. The tool should ensure consistent formatting, margins, fonts, and design across the merged document. Bonus features could include drag-and-drop reordering of documents, preview before merging, and options to select specific sections/pages to include.",
+    description: "In academic, publishing, and professional settings, multiple documents such as chapters of a book, research papers, or departmental reports are often created separately. Merging these documents into a single, well-formatted file is a time-consuming and error-prone process. Inconsistent designs, margins, fonts, and layouts lead to an unprofessional final output and require significant manual editing.To address this challenge, a Smart Document Merger tool is proposed. This tool will automatically combine multiple documents into one unified document while ensuring consistent formatting, margins, fonts, and design standards across the entire file. By eliminating the need for manual adjustments, the solution will save time, reduce human error, and provide a professional, ready-to-publish document with minimal effort.",
   }
 ];
 
