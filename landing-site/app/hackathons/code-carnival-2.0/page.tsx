@@ -154,11 +154,24 @@ export default function Page() {
                 }}
               >
                 <CardHeader className="flex flex-col items-center">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="px-3 py-1 rounded-full text-xs font-mono bg-pink-900 text-white tracking-wide">
-                      {item.phase}
-                    </span>
-                    <span className="text-xs text-white/70">{item.date}</span>
+                  <span className="px-3 py-1 rounded-full text-xs font-mono bg-pink-900 text-white tracking-wide mb-2">
+                    {item.phase}
+                  </span>
+                  <div className="flex flex-col items-center mb-2">
+                    {item.newDate ? (
+                      <>
+                        <span className="text-xs px-2 py-1 rounded bg-green-900 text-green-300 font-semibold mb-1">
+                          {item.newDate}
+                        </span>
+                        <span className="text-xs px-2 py-1 rounded bg-gray-700 text-gray-400 line-through">
+                          {item.date}
+                        </span>
+                      </>
+                    ) : (
+                      <span className="text-xs px-2 py-1 rounded bg-gray-700 text-gray-200">
+                        {item.date || item.newDate || item.date}
+                      </span>
+                    )}
                   </div>
                   <CardTitle
                     className="text-xl font-bold mb-2 text-center"
